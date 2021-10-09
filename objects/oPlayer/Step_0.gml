@@ -154,6 +154,7 @@
 	hsp = current_speed;
 	prev_move = move;
 #endregion
+
 #region Inventory toggle
 	
 	if((key_inventory)&&(!in_inventory))
@@ -435,6 +436,9 @@ switch (state) // STATE MACHINE \\
 			walksp = 2;
 			blocking_toggle = 0;
 			projectile_fired = 0;
+			
+			screenshake(2,30);
+			
 			if(in_inventory) {
 				knockback_state(FinnHurt, "Checking Inventory");
 				
@@ -443,8 +447,7 @@ switch (state) // STATE MACHINE \\
 				
 			}else{
 				
-				knockback_state(FinnHurt, "Move");
-				
+				knockback_state(FinnHurt, "Move");	
 			}
 		break;
 	
