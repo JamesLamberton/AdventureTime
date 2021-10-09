@@ -26,10 +26,13 @@ last_instance = 0;
 flying = 0;
 below = -1;
 follow_height = 45;
+<<<<<<< HEAD
 wanderer = 0;//instances that move around every now n then are wanderer's, set 1 in instance create event
 wandering = 0;
 timer = 0;
 toggle = 0;
+=======
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
 
 
 attack_distance = 32;

@@ -62,7 +62,10 @@
     {"id":{"name":"WarriorIdle","path":"sprites/WarriorIdle/WarriorIdle.yy",},"order":0,},
     {"id":{"name":"sCrossbowIcon","path":"sprites/sCrossbowIcon/sCrossbowIcon.yy",},"order":12,},
     {"id":{"name":"Jump","path":"scripts/Jump/Jump.yy",},"order":7,},
+<<<<<<< HEAD
     {"id":{"name":"oLavaGuard","path":"objects/oLavaGuard/oLavaGuard.yy",},"order":11,},
+=======
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
     {"id":{"name":"oDemonSword","path":"objects/oDemonSword/oDemonSword.yy",},"order":13,},
     {"id":{"name":"oParallax","path":"objects/oParallax/oParallax.yy",},"order":3,},
     {"id":{"name":"oFriendlyParent","path":"objects/oFriendlyParent/oFriendlyParent.yy",},"order":8,},
@@ -75,7 +78,10 @@
     {"id":{"name":"WormMoving","path":"sprites/WormMoving/WormMoving.yy",},"order":1,},
     {"id":{"name":"oFade","path":"objects/oFade/oFade.yy",},"order":5,},
     {"id":{"name":"BananaGuardRunning","path":"sprites/BananaGuardRunning/BananaGuardRunning.yy",},"order":1,},
+<<<<<<< HEAD
     {"id":{"name":"oNeutralParent","path":"objects/oNeutralParent/oNeutralParent.yy",},"order":10,},
+=======
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
     {"id":{"name":"WarriorAttack","path":"sprites/WarriorAttack/WarriorAttack.yy",},"order":1,},
     {"id":{"name":"sInventorySideBox","path":"sprites/sInventorySideBox/sInventorySideBox.yy",},"order":15,},
     {"id":{"name":"WarriorAttackDamage","path":"sprites/WarriorAttackDamage/WarriorAttackDamage.yy",},"order":3,},
@@ -84,6 +90,10 @@
     {"id":{"name":"Forest","path":"sprites/Forest/Forest.yy",},"order":1,},
     {"id":{"name":"oDataCarrier","path":"objects/oDataCarrier/oDataCarrier.yy",},"order":9,},
     {"id":{"name":"oGoldCoin","path":"objects/oGoldCoin/oGoldCoin.yy",},"order":12,},
+<<<<<<< HEAD
+=======
+    {"id":{"name":"screenshake","path":"scripts/screenshake/screenshake.yy",},"order":10,},
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
     {"id":{"name":"oProjectileParent","path":"objects/oProjectileParent/oProjectileParent.yy",},"order":2,},
     {"id":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"order":7,},
     {"id":{"name":"oEnter","path":"objects/oEnter/oEnter.yy",},"order":6,},

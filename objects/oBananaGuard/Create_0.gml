@@ -4,7 +4,10 @@ vsp = 2;
 grv = 0.3;
 walksp = 0.4;
 jump_height = 2.5;
+<<<<<<< HEAD
 wanderer = 1;
+=======
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
 
 ranged_flag = 0;
 attack_distance = 32;
