@@ -38,13 +38,10 @@ if(other.state == "Blocking") && (other.image_index > 2.8){
 }else{
 	
 	other.hp -= damage;
-<<<<<<< HEAD
 	if(other.provokable){
 		other.provoked = 1;
 		other.target = creator.object_index;
 	}
-=======
->>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
 }
 if(object_get_name(creator.object_index) == "oPlayer"){
 	
