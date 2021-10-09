@@ -6,4 +6,3 @@ facing  = 1;
 touching_ground = 1;
 hsp = 0;
 vsp = 0;
-provokable = 1;

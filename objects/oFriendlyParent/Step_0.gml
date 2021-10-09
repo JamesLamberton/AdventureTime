@@ -30,7 +30,11 @@ vsp = vsp + grv;
 	
 	if ((place_meeting(x+1,y-1,oSolid)) or (place_meeting(x-1,y-1,oSolid)))
 	{
+<<<<<<< HEAD
 		if(state == "Chase") || (wandering){
+=======
+		if(state == "Chase"){
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
 			vsp = - jump_height;
 		}
 	}
@@ -42,6 +46,7 @@ switch (state)  // State Machine \\
 	#region Idle State 
 	
 		case "Idle":
+<<<<<<< HEAD
 			if(wanderer){
 				timer++;
 				if(timer > 4*room_speed) && (timer <= 6*room_speed){
@@ -84,6 +89,10 @@ switch (state)  // State Machine \\
 			}else{
 				set_state_sprite(Idle_sprite, 1, 0);
 			}
+=======
+		
+			set_state_sprite(Idle_sprite, 1, 0);
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
 			if not instance_exists(oEnemyParent) break;
 			
 			var closest_enemy = instance_nearest(x,y,oEnemyParent);
@@ -91,15 +100,23 @@ switch (state)  // State Machine \\
 			if distance_to_closest_enemy < 250
 			{
 				state = "Chase";	
+<<<<<<< HEAD
 				timer = 0;
 			}
 			
 			
+=======
+			}
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
 		
 		break;
 	
 	#endregion
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
 	#region Chase State
 	
 		case "Chase":
@@ -109,11 +126,15 @@ switch (state)  // State Machine \\
 			}else{
 				set_state_sprite(Jump_sprite, 1, 0);
 			}
+<<<<<<< HEAD
 			if not instance_exists(oEnemyParent)
 			{
 				state = "Idle";
 				break;
 			}
+=======
+			if not instance_exists(oEnemyParent) break;
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
 			
 			facing = image_xscale;
 			var closest_enemy = instance_nearest(x,y,oEnemyParent);
@@ -174,11 +195,16 @@ switch (state)  // State Machine \\
 			
 			set_state_sprite(Jump_sprite, 1, 0);
 			vsp = - jump_height;
+<<<<<<< HEAD
 			if(wandering){
 				state = "Idle";
 			}else{
 				state = "Chase";
 			}
+=======
+			
+			state = "Chase";
+>>>>>>> f07d66795efcb623512c84cf468d68c5574fd46c
 			
 		break;
 	#endregion
