@@ -1,0 +1,1 @@
+part_emitter_destroy(oParticleSetup.particle_system, emitterRain);

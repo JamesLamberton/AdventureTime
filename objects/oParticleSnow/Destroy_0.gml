@@ -1,0 +1,2 @@
+part_emitter_destroy(oParticleSetup.particle_system, emitterSnow);
+part_emitter_destroy(oParticleSetup.particle_system, emitterSnowCloud);	
