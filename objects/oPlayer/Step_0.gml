@@ -436,6 +436,7 @@ switch (state) // STATE MACHINE \\
 			walksp = 2;
 			blocking_toggle = 0;
 			projectile_fired = 0;
+			screenshake(1,10);
 			if(in_inventory) {
 				knockback_state(FinnHurt, "Checking Inventory");
 				
