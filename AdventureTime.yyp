@@ -84,6 +84,7 @@
     {"id":{"name":"oDataCarrier","path":"objects/oDataCarrier/oDataCarrier.yy",},"order":9,},
     {"id":{"name":"oGoldCoin","path":"objects/oGoldCoin/oGoldCoin.yy",},"order":12,},
     {"id":{"name":"oProjectileParent","path":"objects/oProjectileParent/oProjectileParent.yy",},"order":2,},
+    {"id":{"name":"screenshake","path":"scripts/screenshake/screenshake.yy",},"order":10,},
     {"id":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"order":7,},
     {"id":{"name":"oEnter","path":"objects/oEnter/oEnter.yy",},"order":6,},
     {"id":{"name":"rm02","path":"rooms/rm02/rm02.yy",},"order":3,},
