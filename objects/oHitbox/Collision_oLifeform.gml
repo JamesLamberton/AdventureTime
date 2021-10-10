@@ -3,6 +3,34 @@ if creator == noone or creator == other or ds_list_find_index(hit_objects, other
 	exit;
 	
 }
+if((object_get_name(object_get_parent(creator.object_index)) == "oEnemyParent") && (object_get_name(object_get_parent(other.object_index)) == "oNeutralParent")){
+	if(!other.friendly){
+		exit;//stopping enemies attacking neutral enemies
+	}
+}
+if ((object_get_name(object_get_parent(creator.object_index)) == "oFriendlyTargetParent") && (object_get_name(object_get_parent(other.object_index)) == "oNeutralParent"))
+{
+	
+	if(other.friendly){
+		if(!other.player_provokable){
+			exit;//stopping finn attacking friendly neutrals that are not player provokable
+		}
+		
+	}	
+}
+
+if((object_get_name(object_get_parent(creator.object_index)) == "oNeutralParent") && (object_get_name(object_get_parent(other.object_index)) == "oNeutralParent")){
+	if(creator.friendly){
+		if(other.friendly){
+			exit;//stopping friendly neutrals hitting friendly nuetrals
+		}
+	}
+	if(!creator.friendly){
+		if(!other.friendly){
+			exit;//stopping enemy neutrals hitting enemy nuetrals
+		}
+	}
+}
 
 if ((object_get_name(object_get_parent(creator.object_index)) == "oEnemyParent") && (object_get_name(object_get_parent(other.object_index)) == "oEnemyParent"))
 {

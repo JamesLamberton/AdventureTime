@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "FlameGuardIdle_strip4",
-    "path": "sprites/FlameGuardIdle_strip4/FlameGuardIdle_strip4.yy",
+    "name": "FlameGuardIdle",
+    "path": "sprites/FlameGuardIdle/FlameGuardIdle.yy",
   },
   "solid": false,
   "visible": true,

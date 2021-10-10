@@ -150,7 +150,7 @@
 
     {"id":{"name":"sSnow","path":"sprites/sSnow/sSnow.yy",},"order":5,},
     {"id":{"name":"set_state_sprite","path":"scripts/set_state_sprite/set_state_sprite.yy",},"order":1,},
-    {"id":{"name":"FlameGuardIdle_strip4","path":"sprites/FlameGuardIdle_strip4/FlameGuardIdle_strip4.yy",},"order":0,},
+    {"id":{"name":"FlameGuardIdle","path":"sprites/FlameGuardIdle/FlameGuardIdle.yy",},"order":0,},
     {"id":{"name":"sRain","path":"sprites/sRain/sRain.yy",},"order":7,},
     {"id":{"name":"RainHardLightBlue","path":"sprites/RainHardLightBlue/RainHardLightBlue.yy",},"order":3,},
     {"id":{"name":"GoldCoin","path":"sprites/GoldCoin/GoldCoin.yy",},"order":5,},

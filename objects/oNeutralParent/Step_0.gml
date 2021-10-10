@@ -85,9 +85,11 @@ switch (state)  // State Machine \\
 			}else{
 				set_state_sprite(Idle_sprite, 1, 0);
 			}
-			if not instance_exists(oEnemyParent) break;
+			if (!target) break;
+			if not instance_exists(target) break;
+				
 			
-			var closest_enemy = instance_nearest(x,y,oEnemyParent);
+			var closest_enemy = instance_nearest(x,y,target);
 			var distance_to_closest_enemy = point_distance(x, y, closest_enemy.x, closest_enemy.y);
 			if (distance_to_closest_enemy < 250) && provoked
 			{
@@ -109,10 +111,11 @@ switch (state)  // State Machine \\
 			}else{
 				set_state_sprite(Jump_sprite, 1, 0);
 			}
-			if not instance_exists(oEnemyParent) break;
+			if (!target) break;
+			if not instance_exists(target) break;
 			
 			facing = image_xscale;
-			var closest_enemy = instance_nearest(x,y,oEnemyParent);
+			var closest_enemy = instance_nearest(x,y,target);
 			var distance_to_closest_enemy = point_distance(x, y, closest_enemy.x, closest_enemy.y);
 			image_xscale = sign(closest_enemy.x - x);
 			if image_xscale == 0
@@ -156,9 +159,11 @@ switch (state)  // State Machine \\
 				}
 			}
 			
-			if distance_to_closest_enemy > 250
+			if distance_to_closest_enemy > 450
 			{
 				state = "Idle";	
+				target = -1;
+				provoked = 0;
 			}
 		
 		break;
@@ -205,9 +210,10 @@ switch (state)  // State Machine \\
 	#region Ranged Attack State
 		case "Ranged Attack":
 			
-			if not instance_exists(oEnemyParent) break;
+			if (!target) break;
+			if not instance_exists(target) break;
 			
-			var closest_enemy = instance_nearest(x,y,oEnemyParent);
+			var closest_enemy = instance_nearest(x,y,target);
 			if((last_instance == -1) or (last_instance == closest_enemy.object_index) or (last_facing == facing)){
 				closest_target_hsp = closest_enemy.x - last_step_x;
 				closest_target_vsp = closest_enemy.y - last_step_y;
