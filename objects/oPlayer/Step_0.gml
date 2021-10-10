@@ -172,8 +172,8 @@
 #endregion
 
 #region Health Potion 
-	if((key_health_potion) && (hp <= max_hp - 10) && (state != "Destroy") && (potion_count > 0)){
-		hp += 10;
+	if((key_health_potion) && (hp <= max_hp - max_hp*heal) && (state != "Destroy") && (potion_count > 0)){
+		hp += max_hp*heal;
 		potion_count--;
 	}else if((key_health_potion) && (hp < max_hp) && (state != "Destroy") && (potion_count > 0)){
 		hp = max_hp;
