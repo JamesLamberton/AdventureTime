@@ -3,7 +3,9 @@
     {"id":{"name":"Hills","path":"sprites/Hills/Hills.yy",},"order":5,},
     {"id":{"name":"sh_daynight","path":"shaders/sh_daynight/sh_daynight.yy",},"order":0,},
     {"id":{"name":"GoblinIdle","path":"sprites/GoblinIdle/GoblinIdle.yy",},"order":3,},
+
     {"id":{"name":"oHealthPotion","path":"objects/oHealthPotion/oHealthPotion.yy",},"order":16,},
+
     {"id":{"name":"oMenu","path":"objects/oMenu/oMenu.yy",},"order":0,},
     {"id":{"name":"oExperience","path":"objects/oExperience/oExperience.yy",},"order":1,},
     {"id":{"name":"sSlotSelected","path":"sprites/sSlotSelected/sSlotSelected.yy",},"order":14,},
@@ -15,9 +17,11 @@
     {"id":{"name":"sMenuSlot","path":"sprites/sMenuSlot/sMenuSlot.yy",},"order":2,},
     {"id":{"name":"Skylayer03","path":"sprites/Skylayer03/Skylayer03.yy",},"order":2,},
     {"id":{"name":"fAdventureTime","path":"fonts/fAdventureTime/fAdventureTime.yy",},"order":0,},
+
     {"id":{"name":"oItemText","path":"objects/oItemText/oItemText.yy",},"order":17,},
     {"id":{"name":"oBolt","path":"objects/oBolt/oBolt.yy",},"order":14,},
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},"order":11,},
+
     {"id":{"name":"FinnDeath","path":"sprites/FinnDeath/FinnDeath.yy",},"order":8,},
     {"id":{"name":"oLavaGuard","path":"objects/oLavaGuard/oLavaGuard.yy",},"order":11,},
     {"id":{"name":"sSun","path":"sprites/sSun/sSun.yy",},"order":6,},
@@ -39,7 +43,9 @@
     {"id":{"name":"MountainLayerIce","path":"sprites/MountainLayerIce/MountainLayerIce.yy",},"order":4,},
     {"id":{"name":"sCol","path":"sprites/sCol/sCol.yy",},"order":0,},
     {"id":{"name":"FinnRoll","path":"sprites/FinnRoll/FinnRoll.yy",},"order":16,},
+
     {"id":{"name":"oLaser","path":"objects/oLaser/oLaser.yy",},"order":13,},
+
     {"id":{"name":"Treehouse","path":"sprites/Treehouse/Treehouse.yy",},"order":6,},
     {"id":{"name":"move_and_collide","path":"scripts/move_and_collide/move_and_collide.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
@@ -64,7 +70,9 @@
     {"id":{"name":"WarriorIdle","path":"sprites/WarriorIdle/WarriorIdle.yy",},"order":0,},
     {"id":{"name":"sCrossbowIcon","path":"sprites/sCrossbowIcon/sCrossbowIcon.yy",},"order":12,},
     {"id":{"name":"Jump","path":"scripts/Jump/Jump.yy",},"order":7,},
+
     {"id":{"name":"oDemonSword","path":"objects/oDemonSword/oDemonSword.yy",},"order":12,},
+
     {"id":{"name":"oParallax","path":"objects/oParallax/oParallax.yy",},"order":3,},
     {"id":{"name":"oFriendlyParent","path":"objects/oFriendlyParent/oFriendlyParent.yy",},"order":8,},
     {"id":{"name":"oArrowParticleEffect","path":"objects/oArrowParticleEffect/oArrowParticleEffect.yy",},"order":0,},
@@ -72,6 +80,7 @@
     {"id":{"name":"WormIdle","path":"sprites/WormIdle/WormIdle.yy",},"order":0,},
     {"id":{"name":"sHitEffect","path":"sprites/sHitEffect/sHitEffect.yy",},"order":3,},
     {"id":{"name":"oYellowSword","path":"objects/oYellowSword/oYellowSword.yy",},"order":8,},
+
     {"id":{"name":"sHealthbar","path":"sprites/sHealthbar/sHealthbar.yy",},"order":0,},
     {"id":{"name":"WormMoving","path":"sprites/WormMoving/WormMoving.yy",},"order":1,},
     {"id":{"name":"oFade","path":"objects/oFade/oFade.yy",},"order":5,},
@@ -83,8 +92,10 @@
     {"id":{"name":"oParticleLeaf","path":"objects/oParticleLeaf/oParticleLeaf.yy",},"order":2,},
     {"id":{"name":"Forest","path":"sprites/Forest/Forest.yy",},"order":1,},
     {"id":{"name":"oDataCarrier","path":"objects/oDataCarrier/oDataCarrier.yy",},"order":9,},
+
     {"id":{"name":"oGoldCoin","path":"objects/oGoldCoin/oGoldCoin.yy",},"order":15,},
     {"id":{"name":"oProjectileParent","path":"objects/oProjectileParent/oProjectileParent.yy",},"order":10,},
+
     {"id":{"name":"screenshake","path":"scripts/screenshake/screenshake.yy",},"order":10,},
     {"id":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"order":7,},
     {"id":{"name":"oEnter","path":"objects/oEnter/oEnter.yy",},"order":6,},
@@ -134,7 +145,9 @@
     {"id":{"name":"FinnMoving","path":"sprites/FinnMoving/FinnMoving.yy",},"order":0,},
     {"id":{"name":"FinnIdle","path":"sprites/FinnIdle/FinnIdle.yy",},"order":2,},
     {"id":{"name":"sHealthPotion","path":"sprites/sHealthPotion/sHealthPotion.yy",},"order":9,},
+
     {"id":{"name":"oItemTextParent","path":"objects/oItemTextParent/oItemTextParent.yy",},"order":18,},
+
     {"id":{"name":"sSnow","path":"sprites/sSnow/sSnow.yy",},"order":5,},
     {"id":{"name":"set_state_sprite","path":"scripts/set_state_sprite/set_state_sprite.yy",},"order":1,},
     {"id":{"name":"FlameGuardIdle_strip4","path":"sprites/FlameGuardIdle_strip4/FlameGuardIdle_strip4.yy",},"order":0,},
@@ -193,7 +206,9 @@
     {"folderPath":"folders/BigStuff/WeatherSystem.yy","order":2,"resourceVersion":"1.0","name":"WeatherSystem","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Lifeforms.yy","order":32,"resourceVersion":"1.0","name":"Lifeforms","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/BigStuff/DayNightSystem.yy","order":0,"resourceVersion":"1.0","name":"DayNightSystem","tags":[],"resourceType":"GMFolder",},
+
     {"folderPath":"folders/BigStuff.yy","order":7,"resourceVersion":"1.0","name":"BigStuff","tags":[],"resourceType":"GMFolder",},
+
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
