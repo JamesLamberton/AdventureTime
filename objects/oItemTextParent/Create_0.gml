@@ -6,7 +6,3 @@ healthPotionCount = 0;
 i = 0;
 timer = 1;
 current = ["",0];
-weapon = 0;
-weapontype = "";
-ammo = 0;
-ammoCount = 0;

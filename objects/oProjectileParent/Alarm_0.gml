@@ -1,1 +1,0 @@
-particle_distant = 1;

@@ -9,8 +9,6 @@ if(collision == 0) && (!weapon_in_inventory){
 				break;
 			}
 			draw_weapon_text = 1;
-			oItemTextParent.weapon = 1;
-			oItemTextParent.weapontype = displayable_name;
 			weapon_in_inventory  = 1;
 			//list of weapons to check off
 			if(inventory_index == 1){

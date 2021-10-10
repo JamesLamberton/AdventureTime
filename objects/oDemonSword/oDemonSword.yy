@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Weapons",
-    "path": "folders/Objects/Weapons.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDemonSword",

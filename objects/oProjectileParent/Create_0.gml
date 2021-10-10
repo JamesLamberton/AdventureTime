@@ -11,7 +11,6 @@ damage_inflicted = 0;
 blocked = 0;
 i = 100;
 draw_text_toggle = 0;
-particle_distant = 1;
 
 creator = noone;
 projectile_direction = 0;
