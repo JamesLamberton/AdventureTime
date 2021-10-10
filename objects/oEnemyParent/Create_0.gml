@@ -50,7 +50,7 @@ coin = 0;//used to store object coin when created
 coin_dropped = 0;
 kill_counts = 1;//to decide if we should count the kill for this death for Finn
 item_dropped = 0;
-chance_of_drop = 1;//portion of 1 of dropping item
+chance_of_drop = 0.2;//portion of 1 of dropping item
 drop = 0;//used to store object that is dropped
 chance_evaluated = 0;
 
