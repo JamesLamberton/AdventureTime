@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Weapons",
-    "path": "folders/Objects/Weapons.yy",
+    "name": "AdventureTime",
+    "path": "AdventureTime.yyp",
   },
   "resourceVersion": "1.0",
   "name": "oProjectileParent",
