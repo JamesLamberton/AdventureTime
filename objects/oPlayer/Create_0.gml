@@ -16,8 +16,6 @@ double_jumped = 0;
 roll_jump = 0;
 jump_height = -5;
 air_attack = 0;
-heal = 0.3;
-alive = 1;
 
 hp = 25;
 max_hp = hp;

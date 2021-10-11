@@ -8,9 +8,6 @@ jump_height = 2.5;
 wanderer = 0;
 provokable = 1;
 provoked = 0;
-player_provokable = 1;
-friendly = 0;
-target = -1;
 
 ranged_flag = 0;
 attack_distance = 32;
@@ -21,14 +18,14 @@ hp = 25;
 max_hp = hp;
 flash = 0;
 
-Idle_sprite = FlameGuardIdle;
-Attack_sprite = FlameGuardIdle;
-Moving_sprite = FlameGuardIdle;
-Damage_sprite = FlameGuardIdle;
-Ranged_sprite = FlameGuardIdle;
-Jump_sprite = FlameGuardIdle;
-Feared_sprite = FlameGuardIdle;
-Hurt_sprite = FlameGuardIdle;
-Death_sprite = FlameGuardIdle;
+Idle_sprite = BananaGuardIdle;
+Attack_sprite = BananaGuardIdle;
+Moving_sprite = BananaGuardRunning;
+Damage_sprite = BananaGuardIdle;
+Ranged_sprite = BananaGuardIdle;
+Jump_sprite = BananaGuardIdle;
+Feared_sprite = BananaGuardIdle;
+Hurt_sprite = BananaGuardIdle;
+Death_sprite = BananaGuardIdle;
 
 state = "Idle";
