@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "Arrow",
-    "path": "sprites/Arrow/Arrow.yy",
+    "name": "sMoon",
+    "path": "sprites/sMoon/sMoon.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oProjectileParent",
-    "path": "objects/oProjectileParent/oProjectileParent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,17 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Effects",
+    "path": "folders/Objects/Effects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBolt",
+  "name": "oMoon",
   "tags": [],
   "resourceType": "GMObject",
 }

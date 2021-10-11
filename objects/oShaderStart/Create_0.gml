@@ -26,5 +26,5 @@ var_color[11] = 0;
 mode_color = 0;
 
 // speed of day/night changing
-mode_speed = 0.0005;
+mode_speed = 0.0011;
 

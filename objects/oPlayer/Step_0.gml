@@ -127,8 +127,10 @@
 	}
 		
 	vsp = vsp + grv;
+		
 	if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state != "Blocking")
 	{
+			
 		vsp = jump_height;
 		jumped = 1;
 			
@@ -138,7 +140,7 @@
 		jumped = 1;
 	}
 	
-	if(double_jumped == 0) && (key_jump) && (vsp != jump_height) && (!in_inventory) {
+	if(double_jumped == 0) && (key_jump) && (vsp != jump_height){
 		double_jumped = 1;
 		vsp = jump_height;
 		if(image_xscale == sign(current_speed)){
@@ -170,8 +172,8 @@
 #endregion
 
 #region Health Potion 
-	if((key_health_potion) && (hp <= max_hp - max_hp*heal) && (state != "Destroy") && (potion_count > 0)){
-		hp += max_hp*heal;
+	if((key_health_potion) && (hp <= max_hp - 10) && (state != "Destroy") && (potion_count > 0)){
+		hp += 10;
 		potion_count--;
 	}else if((key_health_potion) && (hp < max_hp) && (state != "Destroy") && (potion_count > 0)){
 		hp = max_hp;
