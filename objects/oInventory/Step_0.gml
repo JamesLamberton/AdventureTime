@@ -77,7 +77,7 @@ if(open == 1){
 	
 	
 }else{
-	depth = 1400;
+	depth = 2000;
 	draw_select = -1;
 	first_open = 1;
 }
