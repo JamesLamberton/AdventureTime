@@ -42,6 +42,7 @@
     {"id":{"name":"sCol","path":"sprites/sCol/sCol.yy",},"order":0,},
     {"id":{"name":"FinnRoll","path":"sprites/FinnRoll/FinnRoll.yy",},"order":16,},
     {"id":{"name":"sInventoryBox","path":"sprites/sInventoryBox/sInventoryBox.yy",},"order":11,},
+    {"id":{"name":"oAnimalParent","path":"objects/oAnimalParent/oAnimalParent.yy",},"order":12,},
     {"id":{"name":"oLaser","path":"objects/oLaser/oLaser.yy",},"order":2,},
     {"id":{"name":"Treehouse","path":"sprites/Treehouse/Treehouse.yy",},"order":6,},
     {"id":{"name":"move_and_collide","path":"scripts/move_and_collide/move_and_collide.yy",},"order":0,},
