@@ -1,7 +1,6 @@
 **NEW IMPLEMENTATIONS:
 
 boss enemy
-neutral parent 
 ranged friendly
 non interacticle NPC
 
@@ -13,10 +12,8 @@ other potions - invisibility
 other melee weapons
 flute
 
-add provokable functionality to neutrals
-add wanderer functionality to friendlies and neutrals
-add neutrals to projectile collisions check
-add neutrals to hitbox collisions check
+add wanderer functionality to enemies
+
 
 follow finn down the tree house on create new game
 

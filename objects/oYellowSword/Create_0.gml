@@ -11,3 +11,5 @@ damage_sprite = FinnAttackDamage;
 displayable_name = "Scarlet";
 weapon_reference = 1;
 
+description_string = "The golden sword of battle. \nFinns trusty sword, a great \nway to begin slaying \nmonsters. \n\nDAMAGE: " + string(damage) + "\nKNOCKBACK: " + string(knockback);
+
