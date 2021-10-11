@@ -36,6 +36,7 @@
     {"id":{"name":"Arrow","path":"sprites/Arrow/Arrow.yy",},"order":11,},
     {"id":{"name":"sEnter","path":"sprites/sEnter/sEnter.yy",},"order":5,},
     {"id":{"name":"oMenuSettings","path":"objects/oMenuSettings/oMenuSettings.yy",},"order":0,},
+    {"id":{"name":"oItemTextParent","path":"objects/oItemTextParent/oItemTextParent.yy",},"order":1,},
     {"id":{"name":"oGoblin","path":"objects/oGoblin/oGoblin.yy",},"order":2,},
     {"id":{"name":"MountainLayerIce","path":"sprites/MountainLayerIce/MountainLayerIce.yy",},"order":4,},
     {"id":{"name":"sCol","path":"sprites/sCol/sCol.yy",},"order":0,},
@@ -88,6 +89,7 @@
     {"id":{"name":"WarriorAttackDamage","path":"sprites/WarriorAttackDamage/WarriorAttackDamage.yy",},"order":3,},
     {"id":{"name":"sLightSmall","path":"sprites/sLightSmall/sLightSmall.yy",},"order":7,},
     {"id":{"name":"create_hitbox","path":"scripts/create_hitbox/create_hitbox.yy",},"order":4,},
+    {"id":{"name":"oItemText","path":"objects/oItemText/oItemText.yy",},"order":0,},
     {"id":{"name":"oParticleLeaf","path":"objects/oParticleLeaf/oParticleLeaf.yy",},"order":2,},
     {"id":{"name":"Forest","path":"sprites/Forest/Forest.yy",},"order":1,},
     {"id":{"name":"oDataCarrier","path":"objects/oDataCarrier/oDataCarrier.yy",},"order":9,},
@@ -206,6 +208,7 @@
     {"folderPath":"folders/BigStuff/DayNightSystem.yy","order":0,"resourceVersion":"1.0","name":"DayNightSystem","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/BigStuff.yy","order":16,"resourceVersion":"1.0","name":"BigStuff","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/BigStuff/Dialog.yy","order":3,"resourceVersion":"1.0","name":"Dialog","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Items.yy","order":16,"resourceVersion":"1.0","name":"Items","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
