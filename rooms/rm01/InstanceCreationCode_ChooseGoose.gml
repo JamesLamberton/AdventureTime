@@ -1,1 +1,1 @@
-text_id = "Choose Goose";
+text_id = "ChooseGoose";

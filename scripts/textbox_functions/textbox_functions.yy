@@ -6,7 +6,7 @@
     "path": "folders/BigStuff/Dialog.yy",
   },
   "resourceVersion": "1.0",
-  "name": "add_text_page",
+  "name": "textbox_functions",
   "tags": [],
   "resourceType": "GMScript",
 }

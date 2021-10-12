@@ -199,8 +199,8 @@ switch (state) // STATE MACHINE \\
 			image_speed = (abs(hsp)+ walksp)/(2*walksp);
 			if (hsp == 0)
 			{
-				image_speed = 1;
-				sprite_index = FinnIdleTorch;			
+				image_speed = 1;		
+				sprite_index = FinnIdle;			
 			}
 			
 			else 

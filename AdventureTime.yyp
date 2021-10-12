@@ -55,7 +55,7 @@
     {"id":{"name":"sSlot","path":"sprites/sSlot/sSlot.yy",},"order":6,},
     {"id":{"name":"FinnDefend","path":"sprites/FinnDefend/FinnDefend.yy",},"order":9,},
     {"id":{"name":"oFriendlyTargetParent","path":"objects/oFriendlyTargetParent/oFriendlyTargetParent.yy",},"order":9,},
-    {"id":{"name":"add_text_page","path":"scripts/add_text_page/add_text_page.yy",},"order":2,},
+    {"id":{"name":"textbox_functions","path":"scripts/textbox_functions/textbox_functions.yy",},"order":2,},
     {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},"order":4,},
     {"id":{"name":"WarriorTakeSword","path":"sprites/WarriorTakeSword/WarriorTakeSword.yy",},"order":5,},
     {"id":{"name":"sScarletInv","path":"sprites/sScarletInv/sScarletInv.yy",},"order":11,},
