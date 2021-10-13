@@ -108,7 +108,7 @@ switch (state)  // State Machine \\
 				state = "Chase";	
 				timer = 0;
 			}
-			if distance_to_closest_animal < 250 && predator < closest_animal.predator
+			if distance_to_closest_animal < 200 && predator < closest_animal.predator
 			{
 				state = "Flee";	
 				timer = 0;
