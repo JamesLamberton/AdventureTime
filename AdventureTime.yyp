@@ -142,6 +142,7 @@
     {"id":{"name":"LaserParticleEffect","path":"sprites/LaserParticleEffect/LaserParticleEffect.yy",},"order":1,},
     {"id":{"name":"oLaserParticleEffect","path":"objects/oLaserParticleEffect/oLaserParticleEffect.yy",},"order":3,},
     {"id":{"name":"SkeletonWalk","path":"sprites/SkeletonWalk/SkeletonWalk.yy",},"order":1,},
+    {"id":{"name":"LargeForestTree","path":"sprites/LargeForestTree/LargeForestTree.yy",},"order":2,},
     {"id":{"name":"oNeutralParent","path":"objects/oNeutralParent/oNeutralParent.yy",},"order":10,},
     {"id":{"name":"SkeletonHit","path":"sprites/SkeletonHit/SkeletonHit.yy",},"order":4,},
     {"id":{"name":"BananaGuardIdle","path":"sprites/BananaGuardIdle/BananaGuardIdle.yy",},"order":0,},
