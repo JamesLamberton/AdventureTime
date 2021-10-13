@@ -1,6 +1,10 @@
 uniform_color = shader_get_uniform(sh_daynight, "u_Colour"); // control shader
 toggle = 0;
-_x = 0;
+_y_sun= 0;
+_y_moon= 0;
+screen_height_sun = 100;
+screen_height_moon = 90;
+screen_height = 110;
 
 
 // day
