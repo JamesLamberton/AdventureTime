@@ -103,15 +103,19 @@ switch (state)  // State Machine \\
 				
 			}	
 			
-			if distance_to_closest_animal < 250 && predator > closest_animal.predator
+			if distance_to_closest_animal < chase_distance && predator > closest_animal.predator
 			{
 				state = "Chase";	
 				timer = 0;
+				current_predator = -1;
 			}
-			if distance_to_closest_animal < 200 && predator < closest_animal.predator
+			if distance_to_closest_animal < flee_distance && predator < closest_animal.predator
 			{
 				state = "Flee";	
 				timer = 0;
+				current_predator = closest_animal;
+				distance_to_current_predator = distance_to_closest_animal;
+				
 			}
 			
 			
@@ -130,20 +134,67 @@ switch (state)  // State Machine \\
 	#region Flee State
 		case "Flee":
 			if(touching_ground){
-				set_state_sprite(Moving_sprite, 1, 0);
+				set_state_sprite(Feared_sprite, 1.5, 0);
 			}else{
 				set_state_sprite(Jump_sprite, 1, 0);
 			}
+			image_xscale = current_predator.image_xscale;
 			facing = image_xscale;
+			var _x = x;
+			x -= 10000000;//yeet it
+			var closest_animal = instance_nearest(_x, y, oAnimalParent);
+			var distance_to_closest_animal = 100000;
+			x = _x;
+			if closest_animal != id && closest_animal != noone && closest_animal.targetable && !closest_animal.sneaking
+			{
+				// You found an instance!
+				if(closest_animal != current_predator) && closest_animal.predator > predator{
+					//new predator
+					current_predator = closest_animal
+				}
+				distance_to_closest_animal = point_distance(x, y, closest_animal.x, closest_animal.y);
+			}else{
+				closest_animal = noone;
+				distance_to_closest_animal = 100000;
+				current_predator = -1;
+				state = "idle";
+			}	
+			//fixes jumpyness of flying entities
+			if(flying){
+				if(((y - closest_animal.y + follow_height) > 0) &&((y - closest_animal.y + follow_height) < 1) ){
+					y = y - (y - closest_animal.y + follow_height);
+				}
+			}
+			
+			if(flying){
+				move_and_collide(facing * chase_speed, (-below) * flysp);
+			}else{
+				move_and_collide(facing * chase_speed, 0);
+			}
+			
+			if distance_to_closest_animal < chase_distance && predator > closest_animal.predator && distance_to_current_predator > flee_distance
+			{
+				state = "Chase";	
+				timer = 0;
+				current_predator = -1;
+			}
+			if distance_to_closest_animal < flee_distance && predator < closest_animal.predator
+			{
+				state = "Flee";	
+				timer = 0;
+				current_predator = closest_animal;
+				distance_to_current_predator = distance_to_closest_animal;
+				
+			}
+			
 		break;
 	#endregion
 	
 	#region Chase State
 	
 		case "Chase":
-		
 			if(touching_ground){
-				set_state_sprite(Moving_sprite, 1, 0);
+				set_state_sprite(Moving_sprite, 1.5, 0);
 			}else{
 				set_state_sprite(Jump_sprite, 1, 0);
 			}
@@ -164,11 +215,21 @@ switch (state)  // State Machine \\
 				// You found an instance!
 				
 				distance_to_closest_animal = point_distance(x, y, closest_animal.x, closest_animal.y);
+				if(closest_animal.predator > predator) && (distance_to_closest_animal < flee_distance){
+					state = "Flee";
+					current_predator = closest_animal;
+					distance_to_current_predator = distance_to_closest_animal;
+				}
 			}else{
 				closest_animal = noone;
 				distance_to_closest_animal = 100000;
 				
 			}	
+			if not instance_exists(closest_animal)
+			{
+				state = "Idle";
+				break;
+			}
 			image_xscale = sign(closest_animal.x - x);
 			if image_xscale == 0
 			{
@@ -184,20 +245,20 @@ switch (state)  // State Machine \\
 				}
 			}
 			
-			if distance_to_closest_animal <= attack_distance
+			if distance_to_closest_animal <= attack_distance && closest_animal.predator < predator
 			{
 				state = "Attack";	
 			}
 			else 
 			{
 				if(flying){
-					move_and_collide(facing * walksp, (-below) * flysp);
+					move_and_collide(facing * chase_speed, (-below) * flysp);
 				}else{
-					move_and_collide(facing * walksp, 0);
+					move_and_collide(facing * chase_speed, 0);
 				}
 			}
 			
-			if distance_to_closest_animal > 250
+			if distance_to_closest_animal > chase_distance
 			{
 				state = "Idle";	
 			}
