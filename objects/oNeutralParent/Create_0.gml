@@ -10,14 +10,14 @@ toggle = 0;
 friendly = 0;//neutral enemy
 player_provokable = 0;
 //all place holders
-Idle_sprite = WarriorIdle;
-Attack_sprite = WarriorAttack;
-Moving_sprite = WarriorMoving;
-Damage_sprite = WarriorAttackDamage;
-Ranged_sprite = WarriorAttackDamage;
-Jump_sprite = WarriorAttackDamage;
-Feared_sprite = WarriorAttackDamage;
-Hurt_sprite = WarriorHurt;
+Idle_sprite = SkeletonIdle;
+Attack_sprite = SkeletonAttack;
+Moving_sprite = SkeletonWalk;
+Damage_sprite = SkeletonAttackDamage;
+Ranged_sprite = SkeletonAttackDamage;
+Jump_sprite = SkeletonWalk;
+Feared_sprite = SkeletonWalk;
+Hurt_sprite = SkeletonHit;
 Death_sprite = SkeletonDead;
 
 ranged_flag = 0;//used to determine if instance is ranged or not

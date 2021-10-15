@@ -1,16 +1,16 @@
 event_inherited();
 
 //all place holders
-Idle_sprite = WarriorIdle;
-Attack_sprite = WarriorAttack;
-Moving_sprite = WarriorMoving;
-Damage_sprite = WarriorAttackDamage;
-Ranged_sprite = WarriorAttackDamage;
-Jump_sprite = WarriorAttackDamage;
-Feared_sprite = WarriorMoving;
-Hurt_sprite = WarriorHurt;
+Idle_sprite = SkeletonIdle;
+Attack_sprite = SkeletonAttack;
+Moving_sprite = SkeletonWalk;
+Damage_sprite = SkeletonAttackDamage;
+Ranged_sprite = SkeletonAttackDamage;
+Jump_sprite = SkeletonWalk;
+Feared_sprite = SkeletonWalk;
+Hurt_sprite = SkeletonHit;
 Death_sprite = SkeletonDead;
-Sneak_sprite = WarriorMoving;
+Sneak_sprite = SkeletonWalk;
 
 flying = 0;
 wanderer = 1;//instances that move around every now n then are wanderer's, set 1 in instance create event

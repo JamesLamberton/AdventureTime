@@ -1,15 +1,15 @@
 event_inherited();
 
-Idle_sprite = GoblinIdle;
-Attack_sprite = GoblinAttack;
-Moving_sprite = GoblinRun;
-Damage_sprite = GoblinAttack;
-Ranged_sprite = WarriorAttackDamage;
-Jump_sprite = GoblinRun;
-Feared_sprite = GoblinRun;
-Hurt_sprite = GoblinHit;
-Death_sprite = GoblinDeath;
-Sneak_sprite = GoblinRun;
+Idle_sprite = SkeletonIdle;
+Attack_sprite = SkeletonAttack;
+Moving_sprite = SkeletonWalk;
+Damage_sprite = SkeletonAttackDamage;
+Ranged_sprite = SkeletonAttackDamage;
+Jump_sprite = SkeletonWalk;
+Feared_sprite = SkeletonWalk;
+Hurt_sprite = SkeletonHit;
+Death_sprite = SkeletonDead;
+Sneak_sprite = SkeletonWalk;
 
 wanderer = 1;//instances that move around every now n then are wanderer's, set 1 in instance create event
 wandering = 0;
