@@ -3,8 +3,11 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
-  "persistent": true,
-  "parentObjectId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "oAnimalParent",
+    "path": "objects/oAnimalParent/oAnimalParent.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,11 +26,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "RoomInstances",
-    "path": "folders/Objects/RoomInstances.yy",
+    "name": "LifeForms",
+    "path": "folders/Objects/LifeForms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oDataCarrier",
+  "name": "oPenguin",
   "tags": [],
   "resourceType": "GMObject",
 }

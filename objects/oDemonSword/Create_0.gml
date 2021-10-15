@@ -10,3 +10,4 @@ attack_sprite = FinnAttackDemonSword;
 damage_sprite = FinnAttackDemonSwordAttack;
 displayable_name = "Demon Blood Sword";
 weapon_reference = 3;
+description_string = "Joshua's sword.\nmade of demon blood and\na studry weapon with\ngreat reach\n\nDAMAGE: " + string(damage) + "\nKNOCKBACK: " + string(knockback);

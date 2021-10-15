@@ -10,13 +10,25 @@ if(equip_enable){//must un hard code below
 	draw_sprite_stretched(sSlot,0,x - 18,y + 37,8,8);
 	draw_text_transformed_colour(x - 15,y + 38,"E",0.4,0.4,0,c_white,c_white,c_white,c_white, 1);
 }
+
 for(var i = 0; i < INVENTORY_SLOTS_SMALL; i++){
 	var xx = x + (i mod row_length) * (cell_size + gap) - 2;
 	var yy = y + (i div row_length) * (cell_size + gap) - 2;
 	draw_sprite(sSlot,0,xx,yy);
+	
 	if (inventory[i] != -1){
 		var current_sprite = list_of_item_sprites[inventory[i]];
 		draw_sprite(current_sprite,0,xx - 1 + gap + ((cell_size - sprite_get_width(current_sprite))/2),yy - 1 + gap + ((cell_size - sprite_get_height(current_sprite))/2));
+		
+		if(description_scarlet){
+			draw_text_transformed_colour(x - 44,y,oPlayer.scarlet.displayable_name,0.5,0.5,0,c_white,c_white,c_white,c_white,1);
+			draw_text_transformed_colour(x - 44,y + 8,oPlayer.scarlet.description_string,0.22,0.30,0,c_white,c_white,c_white,c_white,1);
+		}else if(description_demon_sword){
+			draw_text_transformed_colour(x - 44,y,oPlayer.blood_sword.displayable_name,0.32,0.5,0,c_white,c_white,c_white,c_white,1);
+			draw_text_transformed_colour(x - 44,y + 8,oPlayer.blood_sword.description_string,0.22,0.30,0,c_white,c_white,c_white,c_white,1);
+		}else{
+			
+		}
 		if(i == (row_length - 1)){
 			//ammo slot
 			draw_sprite(sSlotLocked,0,xx,yy);

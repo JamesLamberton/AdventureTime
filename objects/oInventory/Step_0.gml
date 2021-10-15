@@ -49,6 +49,14 @@ if(open == 1){
 			//can equip item is weapon
 			equip_enable = 1;
 			
+			if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){
+				description_demon_sword = 1;
+				description_scarlet = 0;
+			}else if (oPlayer.scarlet != -1) && (draw_select == oPlayer.scarlet.inventory_index){
+				description_scarlet = 1;
+				description_demon_sword = 0;
+			}
+			
 			if(key_equip){
 				if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){
 					//item is blood_sword
@@ -58,6 +66,7 @@ if(open == 1){
 					oPlayer.inventory.inventory[oPlayer.melee_weapon.inventory_index] = oPlayer.melee_weapon.weapon_reference;
 					oPlayer.melee_weapon = oPlayer.blood_sword;
 					
+					
 				}else if (oPlayer.scarlet != -1) && (draw_select == oPlayer.scarlet.inventory_index){
 					//item is scarlet
 					oPlayer.melee_weapon.inventory_index = oPlayer.scarlet.inventory_index;
@@ -65,14 +74,20 @@ if(open == 1){
 					oPlayer.inventory.inventory[0] = oPlayer.scarlet.weapon_reference;
 					oPlayer.inventory.inventory[oPlayer.melee_weapon.inventory_index] = oPlayer.melee_weapon.weapon_reference;
 					oPlayer.melee_weapon = oPlayer.scarlet;
+					
 				}
 			}
 		
 		}else{
 			equip_enable = 0;
+			description_demon_sword = 0;
+			description_scarlet = 0;
+			
 		}
 	}else{
 		equip_enable = 0;
+		description_demon_sword = 0;
+		description_scarlet = 0;
 	}
 	
 	
