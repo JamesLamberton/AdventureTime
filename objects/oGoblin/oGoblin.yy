@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "GoblinIdle",
-    "path": "sprites/GoblinIdle/GoblinIdle.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

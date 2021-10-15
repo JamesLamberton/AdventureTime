@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "WarriorIdle",
-    "path": "sprites/WarriorIdle/WarriorIdle.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
