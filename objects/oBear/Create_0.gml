@@ -26,6 +26,7 @@ hsp = 0;
 vsp = 2;
 grv = 0.3;
 walksp = 0.5;
+chase_speed = 1.5*walksp;
 sneak_sp = walksp/2;
 flysp = 0.7;
 jump_height = 2.5;
