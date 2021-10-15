@@ -1,0 +1,6 @@
+- How to add dialoge 
+
+1. add the characters case and dialouge to the "game_text" script
+2. add an oSpeakPiece to where you want the dialoge to happen
+3. in creation code add "text_id = "character case name";"
+4. done

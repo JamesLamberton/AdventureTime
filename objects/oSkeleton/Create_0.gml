@@ -19,9 +19,9 @@ Idle_sprite = SkeletonIdle;
 Attack_sprite = SkeletonAttack;
 Moving_sprite = SkeletonWalk;
 Damage_sprite = SkeletonAttackDamage;
-Ranged_sprite = WarriorAttackDamage;
+Ranged_sprite = SkeletonAttackDamage;
 Jump_sprite = SkeletonWalk;
-Feared_sprite = WarriorAttackDamage;
+Feared_sprite = SkeletonReact;
 Hurt_sprite = SkeletonHit;
 Death_sprite = SkeletonDead;
 

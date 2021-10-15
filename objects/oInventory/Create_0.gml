@@ -11,6 +11,9 @@ list_of_item_sprites = [sArrowInv, sScarletInv,sHealthPotionInv,bloodswordinv];/
 list_of_item_object_reference = [oBolt,oYellowSword,oHealthPotion,oDemonSword];//list of all item objects, must direcly corespond to item sprites
 open = 0;
 draw_select = -1;
+description_scarlet = 0;
+description_demon_sword = 0;
+text_box = 0;
 equip_enable = 0;
 first_open = 1;
 

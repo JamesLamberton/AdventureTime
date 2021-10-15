@@ -1,4 +1,11 @@
 uniform_color = shader_get_uniform(sh_daynight, "u_Colour"); // control shader
+toggle = 0;
+_y_sun= 0;
+_y_moon= 0;
+screen_height_sun = 100;
+screen_height_moon = 90;
+screen_height = 110;
+
 
 // day
 var_color[0] = 1; // red
@@ -26,5 +33,5 @@ var_color[11] = 0;
 mode_color = 0;
 
 // speed of day/night changing
-mode_speed = 0.0011;
+mode_speed = 0.0003;
 

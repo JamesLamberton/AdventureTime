@@ -31,35 +31,39 @@ if (mode_color = clamp(mode_color, 0.75, 1)) {
 }
 
 #endregion
+// control var - 0=dawn, 0.25=day, 0.5=sunset, 0.75=night, 1=dawn
 
 #region Sun Control 
-
-	layer_y("Sun", room_height - room_height*(mode_color)/0.25);
-
+	/*
 	if mode_color < 0.25 
 	{
-		layer_y("Sun", room_height - room_height*(mode_color)/0.25);
+		layer_y("Sun", room_height - 50 - room_height*(mode_color)/0.25); // Sun Rise
 	} 
 
-	else if mode_color >= 0.25 
+	else if mode_color > 0.25 
 	{
-		layer_y("Sun", room_height*((mode_color-0.25)/0.25));
+		layer_y("Sun", room_height*((mode_color-0.25)/0.25) - 230); // Sun Set
 	}
+	*/
+	_y_sun = screen_height*sin(2*pi*mode_color - pi) + room_height/2 + screen_height_sun;//could be changed once paralax is added for y
+	layer_y("Sun",_y_sun);
+	
 
 #endregion
 
 #region Moon Control
 
-	layer_y("Moon", room_height - room_height*(mode_color)/1);
-
-	if mode_color < 1 
+	/*
+	if mode_color < 0.75 and mode_color > 0.5
 	{
-		layer_y("Moon", room_height - room_height*(mode_color)/1);
+		layer_y("Moon", room_height + 130 - room_height*(mode_color - 0.5)/0.25); // Moon Rise
 	} 
 
-	else if mode_color >= 0.25
+	else if mode_color >= 0.75 or mode_color < 0.25
 	{
-		layer_y("Moon", room_height*((mode_color-0.25)/0.25));
+		layer_y("Moon", room_height*((mode_color-0.75)/0.25) - 70); // Moon Set
 	}
-
+	*/
+	_y_moon = screen_height*sin(2*pi*mode_color ) + room_height/2 + screen_height_moon;//could be changed once paralax is added for y
+	layer_y("Moon",_y_moon);
 #endregion

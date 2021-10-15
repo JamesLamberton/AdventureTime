@@ -140,7 +140,7 @@
 		jumped = 1;
 	}
 	
-	if(double_jumped == 0) && (key_jump) && (vsp != jump_height){
+	if(double_jumped == 0) && (key_jump) && (vsp != jump_height) && (!in_inventory){
 		double_jumped = 1;
 		vsp = jump_height;
 		if(image_xscale == sign(current_speed)){
@@ -199,7 +199,7 @@ switch (state) // STATE MACHINE \\
 			image_speed = (abs(hsp)+ walksp)/(2*walksp);
 			if (hsp == 0)
 			{
-				image_speed = 1;
+				image_speed = 1;		
 				sprite_index = FinnIdle;			
 			}
 			

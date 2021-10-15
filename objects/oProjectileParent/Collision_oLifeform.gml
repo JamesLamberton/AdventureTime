@@ -4,6 +4,14 @@ if(instance_exists(oPlayer)) && (other.object_index == oPlayer.object_index){
 	
 	exit;//handled seperetly
 }
+
+if((object_get_name(object_get_parent(creator.object_index)) == "oAnimalParent") && (object_get_name(object_get_parent(other.object_index)) != "oAnimalParent")){
+	exit;//stop animals hitting anythign but animals
+}
+if((object_get_name(object_get_parent(other.object_index)) == "oAnimalParent") && (object_get_name(object_get_parent(creator.object_index)) != "oAnimalParent")){
+	exit;//stop animals being hit by anything other than animals
+}
+
 if((object_get_name(object_get_parent(creator.object_index)) == "oEnemyParent") && (object_get_name(object_get_parent(other.object_index)) == "oNeutralParent")){
 	if(!other.friendly){
 		exit;//stopping enemies attacking neutral enemies

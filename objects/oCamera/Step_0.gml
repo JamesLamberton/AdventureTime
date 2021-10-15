@@ -16,7 +16,7 @@ shake_remain = max(0,shake_remain-((1/shake_length)*shake_magnitude));
 if (follow != noone)
 {
 	xTo = follow.x;
-	yTo = follow.y - 55;
+	yTo = follow.y - 35;
 }
 
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
