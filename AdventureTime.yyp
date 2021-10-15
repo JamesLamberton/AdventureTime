@@ -84,6 +84,7 @@
     {"id":{"name":"Forest","path":"sprites/Forest/Forest.yy",},"order":1,},
     {"id":{"name":"oDataCarrier","path":"objects/oDataCarrier/oDataCarrier.yy",},"order":9,},
     {"id":{"name":"oGoldCoin","path":"objects/oGoldCoin/oGoldCoin.yy",},"order":12,},
+    {"id":{"name":"BigForestTree","path":"sprites/BigForestTree/BigForestTree.yy",},"order":3,},
     {"id":{"name":"oProjectileParent","path":"objects/oProjectileParent/oProjectileParent.yy",},"order":4,},
     {"id":{"name":"screenshake","path":"scripts/screenshake/screenshake.yy",},"order":10,},
     {"id":{"name":"sReflectionTarget","path":"sprites/sReflectionTarget/sReflectionTarget.yy",},"order":10,},
