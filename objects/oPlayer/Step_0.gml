@@ -138,9 +138,9 @@
 	}else if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state == "Blocking"){
 		vsp = jump_height/2;
 		jumped = 1;
-	}
+	} 
 	
-	if(double_jumped == 0) && (key_jump) && (vsp != jump_height){
+	if(double_jumped == 0) and (key_jump) and (vsp != jump_height) and (!in_inventory){
 		double_jumped = 1;
 		vsp = jump_height;
 		if(image_xscale == sign(current_speed)){
@@ -303,10 +303,8 @@ switch (state) // STATE MACHINE \\
 			{
 				if (image_index > 2){
 					hsp = hsp*1.2;
-					vsp = 0.2;
-					}
-				
-				
+				//	vsp = 0.2;
+					}	
 			}
 			if animation_end()
 			{
@@ -344,7 +342,7 @@ switch (state) // STATE MACHINE \\
 			{
 				if (image_index > 2){
 					hsp = hsp*1.2;
-					vsp = 0.2;
+					//vsp = 0.2;
 					}
 				
 				
@@ -476,5 +474,4 @@ switch (state) // STATE MACHINE \\
 		facing = sign(move);
 	}
 	
-
 #endregion

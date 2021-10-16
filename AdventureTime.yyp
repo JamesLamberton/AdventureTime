@@ -21,6 +21,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":5,},
     {"id":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"order":4,},
     {"id":{"name":"GrassTest","path":"sprites/GrassTest/GrassTest.yy",},"order":2,},
+    {"id":{"name":"sTextboxSelect","path":"sprites/sTextboxSelect/sTextboxSelect.yy",},"order":6,},
     {"id":{"name":"sSpeakPiece","path":"sprites/sSpeakPiece/sSpeakPiece.yy",},"order":8,},
     {"id":{"name":"oShaderStart","path":"objects/oShaderStart/oShaderStart.yy",},"order":1,},
     {"id":{"name":"FinnAttackRanged","path":"sprites/FinnAttackRanged/FinnAttackRanged.yy",},"order":10,},

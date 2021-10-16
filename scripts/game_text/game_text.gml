@@ -12,22 +12,19 @@ function game_text(_text_id)
 					script_option("Nah", "ChooseGoose - No");
 			break;
 		
-			case "ChooseGoose - Yes":
-		
-				add_text_page("Take a look!");
-		
-			break;
+			case "ChooseGoose - Yes": add_text_page("Take a look!"); break;
 			
-			case "ChooseGoose - No":
+			case "ChooseGoose - No": add_text_page("Aw, see ya round"); add_text_page("Bye"); break;
 		
-				add_text_page("Aw, see ya round");
-		
-			break;
 		
 		#endregion
+		
+		#region Jake 
 		
 		case "Jake":
 		add_text_page("Hey Finn");
 		break;
+		
+		#endregion
 	}
 }
