@@ -13,6 +13,7 @@ jump_boost = 0.5;
 prev_move = 0;
 jumped = 0;
 rolled = 0;
+roll_dir = 1;
 double_jumped = 0;
 roll_jump = 0;
 jump_height = -5;

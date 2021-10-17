@@ -29,5 +29,11 @@ function acceleration(current_speed,idle,current_facing,prev_facing,acc_rate,tou
 	if(!touching_ground) && ((current_facing == 1)|| (current_facing == -1)){
 		current_speed = current_speed - acc_sign_*acc_rate/3;
 	}
+	if(current_speed >= walksp){
+		current_speed = walksp;
+	}else if(current_speed <= -walksp){
+		current_speed = -walksp;
+	}
+	
 	return current_speed;
 }

@@ -87,31 +87,26 @@ show_debug_message(hsp);
 	}
 	
 	current_speed = acceleration(current_speed,idle,move,prev_move,acc_rate,touching_ground,walksp);
-	//limit current speed to walksp or add jump boost if jumped
-	if(current_speed >= walksp ){
-		current_speed = walksp;
-		if(!touching_ground) && (jumped){
-			if(rolled == 1){
-				current_speed = rollspd + jump_boost;
-				double_jumped = 0;
-				rolled = 2;
-			}else{
-				current_speed += jump_boost;
-				
-			}
-		}
-	}else if (current_speed <= -walksp ){
-		current_speed = -walksp;
-		if(!touching_ground) && (jumped){
-			if(rolled == 1){
-				current_speed = -rollspd - jump_boost;
-				double_jumped = 0;
-				rolled = 2;
-			}else{
-				current_speed -= jump_boost;
-			}
+	// add jump boost if jumped
+	if(!touching_ground) && (jumped) && (sign(current_speed)){
+		if(rolled == 1){
+			current_speed = rollspd + jump_boost;
+			double_jumped = 0;
+			rolled = 2;
+		}else{
+			current_speed += jump_boost;
 		}
 	}
+	if(!touching_ground) && (jumped)&&(!sign(current_speed)){
+		if(rolled == 1){
+			current_speed = -rollspd - jump_boost;
+			double_jumped = 0;
+			rolled = 2;
+		}else{
+			current_speed -= jump_boost;
+		}
+	}
+	
 		
 	vsp = vsp + grv;
 		
