@@ -65,41 +65,28 @@
 	y = y + vsp;
 
 #endregion
-
+show_debug_message(hsp);
 #region Movement + Jumping
 	var move = key_right - key_left;
 	if(in_inventory){
 		move = 0;
 	}
+	
 	if(move == 0){
-		//stopped moving
-		if(prev_move == 1){
-			//was prev moving positive
-			acc_sign = -1;//slow down
-		}else if(prev_move == -1){
-			//was prev moving negative
-			acc_sign = 1;//slow down
+		idle = 1;
+		if(flag == 0){
+			flag = 1;
+			acc_sign = -prev_move;
 		}
-		current_speed = current_speed + 1.2*acc_sign*acc_rate;
-		if((current_speed <= 0) && (!acc_sign)) || ((current_speed >= 0) && (acc_sign)) {
-			current_speed = 0;
-		}
-	}else if(prev_move == move) ||(prev_move == move + 2) || (prev_move == move - 2){
-		//moving in same direction or changing direction
-		acc_sign = move;
-		if(sign(current_speed) == acc_sign){
-			//accelrate normally
-			current_speed = current_speed + acc_sign*acc_rate;
-		}else{
-			// braking decelerate more
-			current_speed = current_speed + 1.8*acc_sign*acc_rate;
+	}else{
+		idle = 0;
+		if(flag == 1){
+			flag = 0;
+			acc_sign = move;
 		}
 	}
-		
-	if(!touching_ground) && ((move == 1)|| (move == -1)){
-		current_speed = current_speed - acc_sign*acc_rate/3;
-	}
-		
+	
+	current_speed = acceleration(current_speed,idle,move,prev_move,acc_rate,touching_ground,walksp);
 	//limit current speed to walksp or add jump boost if jumped
 	if(current_speed >= walksp ){
 		current_speed = walksp;

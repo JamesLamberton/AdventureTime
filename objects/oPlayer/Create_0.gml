@@ -7,6 +7,7 @@ walksp = 2;
 current_speed = 0;
 acc_rate = 0.151234;//make sure its a kinda weird number so he does not == 0 when changing direction
 acc_sign = 1;
+flag = 0;
 rollspd = 3;
 jump_boost = 0.5;
 prev_move = 0;

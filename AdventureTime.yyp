@@ -94,6 +94,7 @@
     {"id":{"name":"sSlotLocked","path":"sprites/sSlotLocked/sSlotLocked.yy",},"order":7,},
     {"id":{"name":"ChooseGooseShop","path":"sprites/ChooseGooseShop/ChooseGooseShop.yy",},"order":8,},
     {"id":{"name":"oGnome","path":"objects/oGnome/oGnome.yy",},"order":1,},
+    {"id":{"name":"acceleration","path":"scripts/acceleration/acceleration.yy",},"order":11,},
     {"id":{"name":"oPartileRain","path":"objects/oPartileRain/oPartileRain.yy",},"order":1,},
     {"id":{"name":"MountainLayer","path":"sprites/MountainLayer/MountainLayer.yy",},"order":3,},
     {"id":{"name":"FinnAttack","path":"sprites/FinnAttack/FinnAttack.yy",},"order":4,},
