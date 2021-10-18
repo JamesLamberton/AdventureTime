@@ -65,7 +65,7 @@
 	y = y + vsp;
 
 #endregion
-show_debug_message(hsp);
+
 #region Movement + Jumping
 	var move = key_right - key_left;
 	if(in_inventory){

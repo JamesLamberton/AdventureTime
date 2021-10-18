@@ -9,6 +9,7 @@ function acceleration(current_speed,idle,current_facing,prev_facing,acc_rate,tou
 		}else if(prev_facing == -1){
 			//was prev moving negative
 			acc_sign_ = 1;//slow down
+			
 		}
 		current_speed = current_speed + 1.2*acc_sign_*acc_rate;
 		if((current_speed <= 0) && (!acc_sign_)) || ((current_speed >= 0) && (acc_sign_)) {

@@ -22,6 +22,7 @@
     {"id":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"order":4,},
     {"id":{"name":"GrassTest","path":"sprites/GrassTest/GrassTest.yy",},"order":2,},
     {"id":{"name":"sSpeakPiece","path":"sprites/sSpeakPiece/sSpeakPiece.yy",},"order":8,},
+    {"id":{"name":"do_the_wander","path":"scripts/do_the_wander/do_the_wander.yy",},"order":12,},
     {"id":{"name":"oShaderStart","path":"objects/oShaderStart/oShaderStart.yy",},"order":1,},
     {"id":{"name":"FinnAttackRanged","path":"sprites/FinnAttackRanged/FinnAttackRanged.yy",},"order":10,},
     {"id":{"name":"sMoon","path":"sprites/sMoon/sMoon.yy",},"order":7,},

@@ -20,8 +20,8 @@ Attack_sprite = BananaGuardIdle;
 Moving_sprite = BananaGuardRunning;
 Damage_sprite = BananaGuardIdle;
 Ranged_sprite = BananaGuardIdle;
-Jump_sprite = BananaGuardIdle;
-Feared_sprite = BananaGuardIdle;
+Jump_sprite = BananaGuardRunning;
+Feared_sprite = BananaGuardRunning;
 Hurt_sprite = BananaGuardIdle;
 Death_sprite = BananaGuardIdle;
 
