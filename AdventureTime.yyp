@@ -29,6 +29,7 @@
     {"id":{"name":"Skylayer02","path":"sprites/Skylayer02/Skylayer02.yy",},"order":1,},
     {"id":{"name":"AdventureTimeTitle","path":"sprites/AdventureTimeTitle/AdventureTimeTitle.yy",},"order":3,},
     {"id":{"name":"approach","path":"scripts/approach/approach.yy",},"order":5,},
+    {"id":{"name":"BananaGuardPortrait","path":"sprites/BananaGuardPortrait/BananaGuardPortrait.yy",},"order":2,},
     {"id":{"name":"oParticleSnow","path":"objects/oParticleSnow/oParticleSnow.yy",},"order":4,},
     {"id":{"name":"Arrow","path":"sprites/Arrow/Arrow.yy",},"order":11,},
     {"id":{"name":"sEnter","path":"sprites/sEnter/sEnter.yy",},"order":5,},
