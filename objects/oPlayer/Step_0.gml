@@ -71,6 +71,9 @@
 	if(in_inventory){
 		move = 0;
 	}
+	if(rolled && touching_ground){
+		move = prev_move;
+	}
 	
 	if(move == 0){
 		idle = 1;
@@ -88,21 +91,23 @@
 	
 	current_speed = acceleration(current_speed,idle,move,prev_move,acc_rate,touching_ground,walksp);
 	// add jump boost if jumped
-	if(!touching_ground) && (jumped) && (sign(current_speed)){
+	if(!touching_ground) && (jumped) && (sign(current_speed)) && (current_speed >= walksp){
 		if(rolled == 1){
 			current_speed = rollspd + jump_boost;
 			double_jumped = 0;
 			rolled = 2;
 		}else{
+			show_debug_message("1");
 			current_speed += jump_boost;
 		}
 	}
-	if(!touching_ground) && (jumped)&&(!sign(current_speed)){
+	if(!touching_ground) && (jumped)&&(!sign(current_speed)) && (current_speed <= -walksp){
 		if(rolled == 1){
 			current_speed = -rollspd - jump_boost;
 			double_jumped = 0;
 			rolled = 2;
 		}else{
+			show_debug_message("2");
 			current_speed -= jump_boost;
 		}
 	}
@@ -327,7 +332,7 @@ switch (state) // STATE MACHINE \\
 				if (image_index > 2){
 					hsp = hsp*1.2;
 					vsp = 0.2;
-					}
+				}
 				
 				
 			}
@@ -376,6 +381,7 @@ switch (state) // STATE MACHINE \\
 			if(touching_ground){
 				rolled = 1;
 				roll_jump = 1;
+				roll_dir = image_xscale;
 			}
 			if(double_jumped == 0){
 				hsp = image_xscale*rollspd;

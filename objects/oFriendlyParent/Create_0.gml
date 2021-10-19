@@ -30,6 +30,7 @@ wanderer = 0;//instances that move around every now n then are wanderer's, set 1
 wandering = 0;
 timer = 0;
 toggle = 0;
+idle = 1;
 
 
 attack_distance = 32;

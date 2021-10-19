@@ -19,7 +19,6 @@ roll_jump = 0;
 jump_height = -5;
 air_attack = 0;
 
-
 hp = 25;
 max_hp = hp;
 level = 1;

@@ -36,7 +36,7 @@ vsp = vsp + grv;
 	}
 	
 #endregion
-
+show_debug_message(hsp);
 switch (state)  // State Machine \\
 {
 	#region Idle State 
@@ -228,7 +228,8 @@ switch (state)  // State Machine \\
 				if(flying){
 					move_and_collide(facing * chase_speed, (-below) * flysp);
 				}else{
-					hsp = acceleration(current_speed,idle,facing,prev_facing,acc_rate,touching_ground,walksp);
+					current_speed = hsp;
+					hsp = acceleration(current_speed,idle,facing,prev_facing,acc_rate,touching_ground,chase_speed);
 					//move_and_collide(facing * chase_speed, 0);
 				}
 			}

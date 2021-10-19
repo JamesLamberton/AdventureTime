@@ -20,6 +20,7 @@ function acceleration(current_speed,idle,current_facing,prev_facing,acc_rate,tou
 		acc_sign_ = current_facing;
 		if(sign(current_speed) == acc_sign_){
 			//accelrate normally
+			
 			current_speed = current_speed + acc_sign_*acc_rate;
 		}else{
 			// braking decelerate more
