@@ -27,4 +27,8 @@ Death_sprite = BananaGuardIdle;
 
 state = "Idle";
 
-msg = [["Hey Finn", "Banana Guard", BananaGuardPortrait],]
+msg = 
+[
+["Hey Finn", "Banana Guard", BananaGuardPortrait],
+["Hey", "Finn", FinnPortrait], 
+]
