@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "BananaGuardIdle",
-    "path": "sprites/BananaGuardIdle/BananaGuardIdle.yy",
+    "name": "ChooseGooseIdle",
+    "path": "sprites/ChooseGooseIdle/ChooseGooseIdle.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oFriendlyParent",
-    "path": "objects/oFriendlyParent/oFriendlyParent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -34,7 +31,7 @@
     "path": "folders/Objects/LifeForms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBananaGuard",
+  "name": "oChooseGoose",
   "tags": [],
   "resourceType": "GMObject",
 }

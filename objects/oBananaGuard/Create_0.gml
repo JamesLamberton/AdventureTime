@@ -26,3 +26,5 @@ Hurt_sprite = BananaGuardIdle;
 Death_sprite = BananaGuardIdle;
 
 state = "Idle";
+
+msg = [["Hey Finn", "Banana Guard", BananaGuardPortrait],]
