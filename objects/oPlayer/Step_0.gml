@@ -140,6 +140,7 @@
 		jumped = 1;
 	} 
 	
+
 	if(double_jumped == 0) and (key_jump) and (vsp != jump_height) and (!in_inventory){
 		double_jumped = 1;
 		vsp = jump_height;
