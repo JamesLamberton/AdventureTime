@@ -1,10 +1,11 @@
+// Inherit the parent event
 event_inherited();
 hsp = 0;
 vsp = 2;
 grv = 0.3;
 walksp = 0.4;
 jump_height = 2.5;
-wanderer = 1;
+wanderer = 0;
 
 ranged_flag = 0;
 attack_distance = 32;
@@ -26,9 +27,3 @@ Hurt_sprite = BananaGuardIdle;
 Death_sprite = BananaGuardIdle;
 
 state = "Idle";
-
-msg = 
-[
-["Hey Finn", "Banana Guard", BananaGuardPortrait],
-["Hey", "Finn", FinnPortrait], 
-]

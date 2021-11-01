@@ -2,11 +2,9 @@
 
 	if (place_meeting(x+hsp,y,oSolid))
 		{
-			
 			hsp = 0;
 		}
-
-x = x + hsp;
+	x = x + hsp;
 	
 #endregion
 
@@ -26,6 +24,9 @@ vsp = vsp + grv;
 	
 #endregion
 
+
+
+
 #region Jump Condition
 	
 	if ((place_meeting(x+1,y-1,oSolid)) or (place_meeting(x-1,y-1,oSolid)))
@@ -36,6 +37,8 @@ vsp = vsp + grv;
 	}
 	
 #endregion
+
+
 
 switch (state)  // State Machine \\
 {

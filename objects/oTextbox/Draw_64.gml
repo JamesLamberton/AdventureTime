@@ -1,37 +1,68 @@
-var _arr = messages[| messageID]; // Getting current message from array and storing it in local variable
+accept_key = keyboard_check_pressed(ord("E"));
 
-var _name = _arr[MSG.NAME];
-var _image = _arr[MSG.IMAGE]; 
+textbox_x = camera_get_view_x(view_camera[0]);
+textbox_y = camera_get_view_y(view_camera[0]) + 100;
 
-draw_set_font(fAdventureTime); // Set Text Font
-
-draw_9slice(x, y, width, height, sDialogBox, 0); // Draw Textbox Utilizing nine slice
-
-// Draw Position
-var _drawX = x + padding; 
-var _drawY = y + padding;
-
-// Draw Image
-if (sprite_exists(_image)) // Checks images existence 
+#region Setup
+if setup == false 
 {
-	var _imageW = sprite_get_width(_image);
-	var _imageH = sprite_get_height(_image);
+	setup = true;
+	draw_set_font(fAdventureTime);
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_left);
 	
-	draw_sprite_ext(_image, 0, _drawX + _imageW / 6, _drawY + _imageH / 6.5, 2, 2, 0, c_white, 1); // Draws Image
+	// Loop through pages
+	page_number = array_length(text);
 	
-	_drawX += _imageW + padding; // Offset draw position for text
+	for (var p = 0; p < page_number; p++)
+	{
+		text_length[p] = string_length(text[p]); // Length of text on each page
+		
+		
+		text_x_offset[p] = 44; // text distance from left side of screen
+	}
 }
+#endregion
 
-draw_set_color(c_dkgray); // Set Text Color
+#region Typing Text
+if draw_char < text_length[page]
+{
+	draw_char += text_spd;
+	draw_char = clamp(draw_char, 0, text_length[page]);
+}
+#endregion
 
-draw_text_transformed(_drawX * 1.8, _drawY, _name, 3.5, 3.5, 0); // Draw Name
+#region Flip Through Pages
+if accept_key
+{
+	if draw_char == text_length[page] // If typing is done, go to next page
+	{
+		if page < page_number-1 // Next page
+		{
+			page++;
+			draw_char = 0;
+		}
+		else // Destroy Old Textbox 
+		{
+			instance_destroy(); 
+		}
+	}
+	else // If not done typing
+	{
+		draw_char = textlength[page];
+	}
+}
+#endregion
 
-_drawY += string_height(_name) + padding; // Settings message position as lower than name
+#region Draw Textbox 
+txtb_img += txtb_img_spd;
+txtb_spr_w = sprite_get_width(txtb_spr);
+txtb_spr_h = sprite_get_height(txtb_spr);
 
-var _maxW = width - (_drawX + padding); // Get maximum text width
+// ---------- Draw back of Textbox ----------
+draw_sprite_ext(txtb_spr,txtb_img,textbox_x+text_x_offset[page]+texbox_x_placement,textbox_y+texbox_y_placement,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,0,c_white,1); 
 
-draw_text_ext_transformed(_drawX * 1.8, _drawY, messageText, -1, _maxW, 2.5, 2.5, 0); // Draw Text
-
-draw_set_color(c_dkgray); // Reset
-
-
+// ---------- Draw Text ----------
+var _drawtext = string_copy(text[page],1,draw_char);
+draw_text_ext_transformed(textbox_x+text_x_offset[page]+texbox_x_placement+border,textbox_y+texbox_y_placement+border,_drawtext,line_seperation,line_width,3,3,0);
+#endregion

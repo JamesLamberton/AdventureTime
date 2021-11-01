@@ -56,3 +56,9 @@ chance_evaluated = 0;
 
 state = "Idle";
 
+msg = 
+[
+["Hey Finn", "Lava Guard", BananaGuardPortrait],
+["Hey", "Finn", FinnPortrait]
+]
+

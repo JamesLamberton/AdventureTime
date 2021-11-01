@@ -15,7 +15,9 @@
 #endregion
 
 #region swap weapon type Melee & Ranged
-	if(key_swap_weapon_type){
+
+	if(key_swap_weapon_type)
+	{
 		equiped_weapon_type = -equiped_weapon_type;
 	}
 
@@ -68,10 +70,12 @@
 
 #region Movement + Jumping
 	var move = key_right - key_left;
-	if(in_inventory){
+	if(in_inventory)
+	{
 		move = 0;
 	}
-	if(move == 0){
+	if(move == 0)
+	{
 		//stopped moving
 		if(prev_move == 1){
 			//was prev moving positive
@@ -101,7 +105,8 @@
 	}
 		
 	//limit current speed to walksp or add jump boost if jumped
-	if(current_speed >= walksp ){
+	if(current_speed >= walksp )
+	{
 		current_speed = walksp;
 		if(!touching_ground) && (jumped){
 			if(rolled == 1){

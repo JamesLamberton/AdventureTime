@@ -1,4 +1,3 @@
-
 event_inherited();
 hsp = 0;
 vsp = 2;
@@ -32,3 +31,9 @@ Hurt_sprite = FlameGuardIdle;
 Death_sprite = FlameGuardIdle;
 
 state = "Idle";
+
+msg = 
+[
+["Hey Finn", "Lava Guard", BananaGuardPortrait],
+["Hey", "Finn", FinnPortrait]
+]
