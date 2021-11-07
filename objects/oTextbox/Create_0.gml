@@ -1,5 +1,5 @@
  // Textbox Parameters
-textbox_width = room_width/1.485; // Width of textbox
+textbox_width = room_width/1.8; // Width of textbox // 1.485 = Whole screen
 textbox_x_placement = -35; 
 textbox_height = room_height/1.9; // Height of textbox
 textbox_y_placement = room_height/0.77;
