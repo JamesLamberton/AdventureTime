@@ -22,6 +22,17 @@ function game_text(_text_id)
 		case "ChooseGoose-TradeNo":
 			add_text("Aw");
 			add_text("No Worries");
+			add_text("Would you like a really long paragraph");
+				text_option("Yeah sure","ChooseGoose-ParagraphYes");
+				text_option("Heck No","ChooseGoose-ParagraphNo");
+		break;
+		
+		case "ChooseGoose-ParagraphNo":
+			add_text(":(");
+		break;
+		
+		case "ChooseGoose-ParagraphYes":
+			add_text("IOgfneuigrtebgrejg nboegineoi gvneirgbinb hjgfdujg bhnergbjdfknb g=f hjgfdujg bhnergbjdfknb g=f");
 		break;
 		
 	#endregion

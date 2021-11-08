@@ -303,7 +303,7 @@ switch (state) // STATE MACHINE \\
 			
 			if (place_meeting(x,y+1,oSolid))
 			{
-				hsp = hsp*1.2; 
+				hsp = hsp*0; 
 			}
 			else
 			{

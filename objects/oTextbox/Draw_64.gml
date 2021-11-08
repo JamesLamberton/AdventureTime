@@ -18,6 +18,58 @@ if setup == false
 		text_length[p] = string_length(text[p]); // Length of text on each page
 		
 		text_x_offset[p] = 44; // text distance from left side of screen
+		
+		for (var c = 0; c < text_length[p]; c++)
+		{
+			var _char_pos = c+1;
+			
+			char [c,p] = string_char_at(text[p],_char_pos); // Store individual characters in char array
+			
+			// Get current width of the line
+			var _txt_up_to_char = string_copy(text[p],1,_char_pos);
+			var _current_txt_w = string_width(_txt_up_to_char) - string_width(char[c,p]);
+			
+			// get last free space
+			if char[c,p] == "" 
+			{
+				last_free_space = _char_pos+1;
+			}
+			
+			// Get line breaks
+			if _current_txt_w - line_break_offset[p] > line_width 
+			{
+				line_break_pos[line_break_num[p],p] = last_free_space;
+				line_break_num[p]++;
+				var _txt_up_to_last_space = string_copy(text[p],1,last_free_space);
+				var _last_free_space_string = string_char_at(text[p],last_free_space);
+				line_break_offset[p] = string_width(_txt_up_to_last_space) - string_width(_last_free_space_string);
+			}
+			
+		}
+		
+		for (var c = 0; c < text_length[p]; c++)
+		{
+			var _char_pos = c+1;
+			var _txt_x = textbox_x + text_x_offset[p] + textbox_x_placement + border;
+			var _txt_y = textbox_y + textbox_y_placement + border;
+			
+			var _txt_up_to_char = string_copy(text[p],1,_char_pos);
+			var _current_txt_w = string_width(_txt_up_to_char) - string_width(char[c,p]);
+			var _txt_line = 0;
+			
+			for (var lb = 0; lb < line_break_num[p]; lb++)
+			{
+				if _char_pos >= line_break_pos[lb,p]
+				{
+					var _str_copy = string_copy(text[p],line_break_pos[lb,p],_char_pos-line_break_pos[lb,p]);
+					_current_txt_w = string_width(_str_copy);
+					
+					_txt_line = lb+1;
+				}
+			}
+			char_x[c,p] = _txt_x + _current_txt_w;
+			char_y[c,p] = _txt_y + _txt_line*line_seperation;
+		}
 	}
 }
 #endregion
@@ -91,7 +143,7 @@ if draw_char == text_length[page] && page == page_number - 1
 		}
 		
 		// Draw Option Text
-		draw_text_ext_transformed(_txtb_x + _op_bord - 50, _txtb_y - _op_space*option_number + _op_space*op + 12, option[op],line_seperation,line_width,3,3,0);
+		draw_text_ext_transformed(_txtb_x + _op_bord - 50, _txtb_y - _op_space*option_number + _op_space*op + 12, option[op],line_seperation,line_width,1.2,1.2,0);
 	}
 	
 		
@@ -99,6 +151,12 @@ if draw_char == text_length[page] && page == page_number - 1
 #endregion
 
 #region Draw Text
-var _drawtext = string_copy(text[page],1,draw_char);
-draw_text_ext_transformed(_txtb_x+border+8,_txtb_y+border,_drawtext,line_seperation,line_width,3,3,0);
+
+for (var c = 0; c < draw_char; c++)
+{
+	draw_text(char_x[c,page], char_y[c,page],char[c,page]);
+}
+
+//var _drawtext = string_copy(text[page],1,draw_char);
+//draw_text_ext_transformed(_txtb_x+border+8,_txtb_y+border,_drawtext,line_seperation,line_width,3,3,0);
 #endregion

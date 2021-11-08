@@ -18,5 +18,5 @@ for (var i = 0; i < op_length; i++)
 {
 	var _color = c_white; 
 	if pos == i {_color = c_yellow};
-	draw_text_color(x + 12, y + 10 + op_space*i, option[menu_level, i], _color, _color, _color, _color, 1);
+	draw_text_transformed_color(x + 12, y + 10 + op_space*i, option[menu_level, i], 0.25, 0.25, 0,_color, _color, _color, _color, 1);
 }

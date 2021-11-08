@@ -1,6 +1,15 @@
+function set_defaults_for_text()
+{
+	line_break_pos[0,page_number] = 100;
+	line_break_num[page_number] = 0;
+	line_break_offset[page_number] = 0;
+}
+
 /// @param text string
 function add_text(_text)
 {
+	set_defaults_for_text();
+	
 	text[page_number] = _text;
 	
 	page_number++;

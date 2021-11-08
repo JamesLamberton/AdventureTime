@@ -16,6 +16,10 @@ page = 0; // what text page we're on
 page_number = 0; // The page number
 text[0] = ""; // Actual text being displayed on the page - is array for multiple pages
 text_length[0] = string_length(text[0]); // calculates how much text is on a line FOR TEXT TYPING
+
+char[0,0] = "";
+char_x[0,0] = 0;
+char_y[0,0] = 0;
 draw_char = 0; // dictates how many characters are being drawn in text string
 text_spd = 1; // Speed of text being drawn
 
@@ -26,3 +30,7 @@ option_pos = 0;
 option_number = 0;
 
 setup = false;
+
+// Effects
+set_defaults_for_text();
+last_free_space = 0;
