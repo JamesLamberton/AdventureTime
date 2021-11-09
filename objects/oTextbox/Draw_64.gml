@@ -30,7 +30,7 @@ if setup == false
 			var _current_txt_w = string_width(_txt_up_to_char) - string_width(char[c,p]);
 			
 			// get last free space
-			if char[c,p] == "" 
+			if char[c,p] == " " 
 			{
 				last_free_space = _char_pos+1;
 			}
@@ -128,7 +128,7 @@ if draw_char == text_length[page] && page == page_number - 1
 	option_pos += keyboard_check_pressed(ord("S")) - keyboard_check_pressed(ord("W"));
 	option_pos = clamp(option_pos, 0, option_number-1);
 	
-	var _op_space = 80; // Space between option boxes
+	var _op_space = 70; // Space between option boxes
 	var _op_bord = 120; // Space between text and edge of box
 	for (var op = 0; op < option_number; op++)
 	{
@@ -143,7 +143,7 @@ if draw_char == text_length[page] && page == page_number - 1
 		}
 		
 		// Draw Option Text
-		draw_text_ext_transformed(_txtb_x + _op_bord - 50, _txtb_y - _op_space*option_number + _op_space*op + 12, option[op],line_seperation,line_width,1.2,1.2,0);
+		draw_text_ext_transformed(_txtb_x + _op_bord - 50, _txtb_y - _op_space*option_number + _op_space*op + 14, option[op],line_seperation,line_width,1,1,0);
 	}
 	
 		

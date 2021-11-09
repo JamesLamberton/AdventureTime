@@ -7,7 +7,7 @@ function game_text(_text_id)
 	#region Choose Goose 
 		
 		case "ChooseGoose":
-			add_text("Hi Finn!");
+			add_text("Hi Finn! Its so great to see you, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah");
 			add_text("Its great to see you again");
 			add_text("Would you like to trade?");
 				text_option("Yes","ChooseGoose-TradeYes");

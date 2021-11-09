@@ -6,9 +6,9 @@ draw_sprite_stretched(sInventorySideBox,0,x - 48, y - 6,40,2*border_size + botto
 draw_set_font(fAdventureTime);
 
 if(equip_enable){//must un hard code below
-	draw_text_transformed_colour(x - 42,y + 40,"Equip by pressing",0.25,0.25,0,c_white,c_white,c_white,c_white, 1);
+	draw_text_transformed_colour(x - 42,y + 40,"Equip by pressing",0.1,0.1,0,c_white,c_white,c_white,c_white, 1);
 	draw_sprite_stretched(sSlot,0,x - 18,y + 37,8,8);
-	draw_text_transformed_colour(x - 15,y + 38,"E",0.4,0.4,0,c_white,c_white,c_white,c_white, 1);
+	draw_text_transformed_colour(x - 15,y + 38,"E",0.1,0.1,0,c_white,c_white,c_white,c_white, 1);
 }
 
 for(var i = 0; i < INVENTORY_SLOTS_SMALL; i++){
