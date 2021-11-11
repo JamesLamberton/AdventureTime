@@ -31,9 +31,3 @@ Hurt_sprite = FlameGuardIdle;
 Death_sprite = FlameGuardIdle;
 
 state = "Idle";
-
-msg = 
-[
-["Hey Finn", "Lava Guard", BananaGuardPortrait],
-["Hey", "Finn", FinnPortrait]
-]
