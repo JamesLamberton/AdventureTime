@@ -229,14 +229,11 @@ if draw_char == text_length[page] && page == page_number - 1
 
 
 
-
 #region Draw Text
 
 for (var c = 0; c < draw_char; c++)
 {
-	draw_text(char_x[c,page], char_y[c,page],char[c,page]);
+	draw_text_color(char_x[c,page], char_y[c,page],char[c,page],col_1[c,page],col_2[c,page],col_3[c,page],col_4[c,page],1); 
 }
 
-//var _drawtext = string_copy(text[page],1,draw_char);
-//draw_text_ext_transformed(_txtb_x+border+8,_txtb_y+border,_drawtext,line_seperation,line_width,3,3,0);
 #endregion

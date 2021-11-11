@@ -250,6 +250,7 @@ switch (state) // STATE MACHINE \\
 		}else{
 			rolled = 0;
 		}
+		
 		break; 
 		
 	

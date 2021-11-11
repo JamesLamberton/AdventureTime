@@ -8,7 +8,9 @@ function game_text(_text_id)
 		
 		case "ChooseGoose":
 			add_text("Hi Finn!","ChooseGoose", -1);
+			text_color(3,8,c_white,c_white,c_blue,c_blue);
 			add_text("Hey Choose Goose","Finn", 1);
+			text_color(4,16,c_yellow,c_yellow,c_white,c_white);
 			add_text("Its great to see you again Finn. Not many travelers have been visting my store, so its good to see a friendly face.","ChooseGoose", -1);
 			add_text("Would you like to trade?","ChooseGoose", -1);
 				text_option("Yes","ChooseGoose-TradeYes");
@@ -40,23 +42,17 @@ function game_text(_text_id)
 		break;
 		
 	#endregion
-		
+
 	#region Banana Guard	
 		case "BananaGuard":
 			add_text("Hey Finn");
-			add_text("Do you like to eat bananas?")
-				text_option("Yes","BananaGuardYes");
-				text_option("No","BananaGuardNo");
-		break;
+			text_color(4,8,c_white,c_white,c_blue,c_blue);
+			add_text("You better be careful, there's skeletons up ahead");
+			text_color(31,40,c_white,c_white,c_red,c_red);
+			add_text("Thanks Banana Guard"); 
+			text_color(7,19,c_yellow,c_yellow,c_white,c_white);
+		break; 
 		
-		case "BananaGuardYes":
-			add_text("I sure do", "Finn");
-			add_text("wtf");
-		break;
-		
-		case "BananaGuardNo":
-			add_text("Thank god");
-		break;
 		
 	#endregion
 	
