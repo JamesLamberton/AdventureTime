@@ -11,13 +11,29 @@ if setup == false
 	draw_set_font(fAdventureTime);
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
+	draw_set_color(c_white);
 	
 	// Loop through pages
 	for (var p = 0; p < page_number; p++)
 	{
 		text_length[p] = string_length(text[p]); // Length of text on each page
+			
+		// ------ Setting Portrait Textbox ------
+
+			// Left Character
+			text_x_offset[p] = room_width/7.25;
+			portrait_x_offset[p] = 8;
+			// Right Character
+			if speaker_side[p] == -1
+			{
+				text_x_offset[p] = 68;
+				portrait_x_offset[p] = 1169;
+			}
+			if speaker_sprite[p] == noone
+			{
+				text_x_offset[p] = 74;
+			}
 		
-		text_x_offset[p] = 44; // text distance from left side of screen
 		
 		for (var c = 0; c < text_length[p]; c++)
 		{
@@ -74,13 +90,47 @@ if setup == false
 }
 #endregion
 
+
+
+
 #region Typing Text
-if draw_char < text_length[page]
+if text_pause_timer <= 0
 {
-	draw_char += text_spd;
-	draw_char = clamp(draw_char, 0, text_length[page]);
+	if draw_char < text_length[page]
+	{
+		draw_char += text_spd;
+		draw_char = clamp(draw_char, 0, text_length[page]);
+		var _check_char = string_char_at(text[page],draw_char);
+		if _check_char = "." || _check_char = "?" || _check_char = "!"
+		{
+			text_pause_timer = text_pause_time;
+		}
+		if _check_char = ","
+		{
+			text_pause_timer = text_pause_time/2;
+		}
+		else 
+		{
+			if snd_count < snd_delay 
+			{
+				snd_count++;
+			}
+			else 
+			{
+				snd_count = 0;
+				audio_play_sound(snd[page],8,false);
+			}
+		}
+	}
+}
+else 
+{
+	text_pause_timer--;
 }
 #endregion
+
+
+
 
 #region Flip Through Pages
 if accept_key
@@ -110,16 +160,42 @@ if accept_key
 }
 #endregion
 
+
+
+
 #region Draw Textbox 
+// Draw Textbox
 var _txtb_x = textbox_x + text_x_offset[page] + textbox_x_placement;
 var _txtb_y = textbox_y + textbox_y_placement;
 txtb_img += txtb_img_spd;
-txtb_spr_w = sprite_get_width(txtb_spr);
-txtb_spr_h = sprite_get_height(txtb_spr);
+txtb_spr_w = sprite_get_width(txtb_spr[page]);
+txtb_spr_h = sprite_get_height(txtb_spr[page]);
+speaker_y = textbox_y+room_height*1.3;
+
+// Draw Character Textbox
+if speaker_sprite[page] != noone
+{
+	sprite_index = speaker_sprite[page];
+	if draw_char == text_length[page]
+	{
+		image_index = 0;
+	}
+	var _speaker_x = textbox_x + portrait_x_offset[page];
+	if speaker_side[page] == -1
+	{
+		_speaker_x += sprite_width; 
+	}
+	// Draw the Character Textbox
+	draw_sprite_ext(txtb_spr[page], txtb_img, textbox_x + portrait_x_offset[page], speaker_y , sprite_width/txtb_spr_w, sprite_height/txtb_spr_h, 0, c_white, 1);
+	draw_sprite_ext(sprite_index, image_index, _speaker_x,speaker_y , speaker_side[page],1,0,c_white,1);
+}
 
 // ---------- Draw back of Textbox ----------
-draw_sprite_ext(txtb_spr,txtb_img,_txtb_x,_txtb_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,0,c_white,1); 
+draw_sprite_ext(txtb_spr[page],txtb_img,_txtb_x,_txtb_y,textbox_width/txtb_spr_w,textbox_height/txtb_spr_h,0,c_white,1); 
 #endregion
+
+
+
 
 #region Draw Options 
 if draw_char == text_length[page] && page == page_number - 1
@@ -134,7 +210,7 @@ if draw_char == text_length[page] && page == page_number - 1
 	{
 		// Option Box
 		var _option_width = string_width(option[op]) + _op_bord*2;
-		draw_sprite_ext(txtb_spr,txtb_img,_txtb_x,_txtb_y-_op_space*option_number+_op_space*op,_option_width/txtb_spr_w,(_op_space-5)/txtb_spr_h,0,c_white,1);
+		draw_sprite_ext(txtb_spr[page],txtb_img,_txtb_x,_txtb_y-_op_space*option_number+_op_space*op,_option_width/txtb_spr_w,(_op_space-5)/txtb_spr_h,0,c_white,1);
 		
 		// Selection Arrow
 		if option_pos == op
@@ -149,6 +225,10 @@ if draw_char == text_length[page] && page == page_number - 1
 		
 }
 #endregion
+
+
+
+
 
 #region Draw Text
 

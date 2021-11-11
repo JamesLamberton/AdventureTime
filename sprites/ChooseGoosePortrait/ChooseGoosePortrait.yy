@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 41,
-  "bbox_right": 148,
-  "bbox_top": 48,
-  "bbox_bottom": 155,
+  "bbox_left": 11,
+  "bbox_right": 175,
+  "bbox_top": 24,
+  "bbox_bottom": 168,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5816bc64-6616-480e-8906-65645df070e6","path":"sprites/FinnPortrait/FinnPortrait.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5816bc64-6616-480e-8906-65645df070e6","path":"sprites/FinnPortrait/FinnPortrait.yy",},"LayerId":{"name":"af50596d-c837-43b5-8420-216e7ff6af13","path":"sprites/FinnPortrait/FinnPortrait.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"FinnPortrait","path":"sprites/FinnPortrait/FinnPortrait.yy",},"resourceVersion":"1.0","name":"5816bc64-6616-480e-8906-65645df070e6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"781dace4-bdf8-4d9e-b030-efd12e01d060","path":"sprites/ChooseGoosePortrait/ChooseGoosePortrait.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"781dace4-bdf8-4d9e-b030-efd12e01d060","path":"sprites/ChooseGoosePortrait/ChooseGoosePortrait.yy",},"LayerId":{"name":"617bf31e-6932-4a2e-b3ad-b95882d0d120","path":"sprites/ChooseGoosePortrait/ChooseGoosePortrait.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"ChooseGoosePortrait","path":"sprites/ChooseGoosePortrait/ChooseGoosePortrait.yy",},"resourceVersion":"1.0","name":"781dace4-bdf8-4d9e-b030-efd12e01d060","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"FinnPortrait","path":"sprites/FinnPortrait/FinnPortrait.yy",},
+    "spriteId": {"name":"ChooseGoosePortrait","path":"sprites/ChooseGoosePortrait/ChooseGoosePortrait.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 8.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e4fba6e7-699a-4b74-8f14-1e371623a8c8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5816bc64-6616-480e-8906-65645df070e6","path":"sprites/FinnPortrait/FinnPortrait.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"51f8acb2-0737-4f44-8429-b519d1776d19","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"781dace4-bdf8-4d9e-b030-efd12e01d060","path":"sprites/ChooseGoosePortrait/ChooseGoosePortrait.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"FinnPortrait","path":"sprites/FinnPortrait/FinnPortrait.yy",},
+    "parent": {"name":"ChooseGoosePortrait","path":"sprites/ChooseGoosePortrait/ChooseGoosePortrait.yy",},
     "resourceVersion": "1.3",
-    "name": "FinnPortrait",
+    "name": "ChooseGoosePortrait",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"af50596d-c837-43b5-8420-216e7ff6af13","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"617bf31e-6932-4a2e-b3ad-b95882d0d120","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/CharacterPortraits.yy",
   },
   "resourceVersion": "1.0",
-  "name": "FinnPortrait",
+  "name": "ChooseGoosePortrait",
   "tags": [],
   "resourceType": "GMSprite",
 }
