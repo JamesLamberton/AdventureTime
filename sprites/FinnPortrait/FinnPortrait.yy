@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 79,
-  "bbox_top": 0,
-  "bbox_bottom": 79,
+  "bbox_left": 41,
+  "bbox_right": 148,
+  "bbox_top": 48,
+  "bbox_bottom": 155,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 80,
-  "height": 80,
+  "width": 190,
+  "height": 190,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"15da830b-3be0-43bb-b6a5-213f36ef1346","path":"sprites/FinnPortrait/FinnPortrait.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"15da830b-3be0-43bb-b6a5-213f36ef1346","path":"sprites/FinnPortrait/FinnPortrait.yy",},"LayerId":{"name":"d70dbfe6-ef25-4f39-95fa-1dcc0dc779e8","path":"sprites/FinnPortrait/FinnPortrait.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"FinnPortrait","path":"sprites/FinnPortrait/FinnPortrait.yy",},"resourceVersion":"1.0","name":"15da830b-3be0-43bb-b6a5-213f36ef1346","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5816bc64-6616-480e-8906-65645df070e6","path":"sprites/FinnPortrait/FinnPortrait.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5816bc64-6616-480e-8906-65645df070e6","path":"sprites/FinnPortrait/FinnPortrait.yy",},"LayerId":{"name":"af50596d-c837-43b5-8420-216e7ff6af13","path":"sprites/FinnPortrait/FinnPortrait.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"FinnPortrait","path":"sprites/FinnPortrait/FinnPortrait.yy",},"resourceVersion":"1.0","name":"5816bc64-6616-480e-8906-65645df070e6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"FinnPortrait","path":"sprites/FinnPortrait/FinnPortrait.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b9f8bf70-0949-464c-a743-83c756a00d15","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"15da830b-3be0-43bb-b6a5-213f36ef1346","path":"sprites/FinnPortrait/FinnPortrait.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e4fba6e7-699a-4b74-8f14-1e371623a8c8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5816bc64-6616-480e-8906-65645df070e6","path":"sprites/FinnPortrait/FinnPortrait.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d70dbfe6-ef25-4f39-95fa-1dcc0dc779e8","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"af50596d-c837-43b5-8420-216e7ff6af13","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

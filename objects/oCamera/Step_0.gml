@@ -1,5 +1,7 @@
 if not instance_exists(oPlayer)exit;
 
+//window_set_fullscreen(true);
+
 // Update Camera Position
 x += (xTo - x)/25;
 y += (yTo - y)/25;

@@ -22,7 +22,7 @@ if enter_key
 		case 0:
 		switch(pos)
 		{
-			case 0:	fade_to_room(rm01, 60, c_black); break;
+			case 0:	fade_to_room(rm01, 60, c_white); break;
 			
 			case 1: break;
 			
