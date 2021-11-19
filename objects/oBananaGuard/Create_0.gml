@@ -1,11 +1,10 @@
-// Inherit the parent event
 event_inherited();
 hsp = 0;
 vsp = 2;
 grv = 0.3;
 walksp = 0.4;
 jump_height = 2.5;
-wanderer = 0;
+wanderer = 1;
 
 ranged_flag = 0;
 attack_distance = 32;

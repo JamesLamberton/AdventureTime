@@ -1,5 +1,4 @@
 event_inherited();
-text_id = "";
 
 //all place holders
 Idle_sprite = SkeletonIdle;
