@@ -3,8 +3,9 @@ hsp = 0;
 vsp = 2;
 grv = 0.3;
 walksp = 0.4;
+acc_rate = 0.071234;//make sure its a kinda weird number so he does not == 0 when changing direction
 jump_height = 2.5;
-wanderer = 0;
+wanderer = 1;
 provokable = 1;
 provoked = 0;
 player_provokable = 1;
