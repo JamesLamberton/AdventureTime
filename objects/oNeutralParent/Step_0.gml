@@ -1,15 +1,3 @@
-if place_meeting(x,y,oPlayer) and keyboard_check_pressed(ord("E")) and !instance_exists(oTextbox)
-{
-	var _tb = instance_create_layer(0, 0, "Instances", oTextbox);
-	var _list = _tb.messages; // Add messages to textboxs list
-	
-	for (var i=0; i<array_length_1d(msg); i++) // Array contains all messages
-	{
-		var _arr = msg[i];		
-		ds_list_add(_list, _arr); // Puts messages inside DS List
-	}
-}
-
 #region Horizontal Collisions 
 
 	if (place_meeting(x+hsp,y,oSolid))
@@ -42,7 +30,7 @@ vsp = vsp + grv;
 	
 	if ((place_meeting(x+1,y-1,oSolid)) or (place_meeting(x-1,y-1,oSolid)))
 	{
-		if(state == "Chase"){
+		if(state == "Chase") || (wandering){
 			vsp = - jump_height;
 		}
 	}
@@ -57,45 +45,11 @@ switch (state)  // State Machine \\
 		
 			if(wanderer){
 				timer++;
-				if(timer > 4*room_speed) && (timer <= 6*room_speed){
-					//wander one way
-					wandering = 1;
-					toggle = 0;
-					move_and_collide(facing * walksp, 0);
-					if(touching_ground){
-						set_state_sprite(Moving_sprite, 1, 0);
-					}else{
-						set_state_sprite(Jump_sprite, 1, 0);
-					}
-				}else if(timer > 6*room_speed) && (timer <= 10*room_speed){
-					//idle again
-					set_state_sprite(Idle_sprite, 1, 0);
-					wandering = 0;
-					if(toggle == 0){
-						facing = - facing;
-						image_xscale = -image_xscale;
-						toggle = 1;
-					}
-				}else if(timer > 10*room_speed) && (timer <= 12*room_speed){
-					//wander the other way
-					wandering = 1;
-					toggle = 0;
-					move_and_collide(facing * walksp, 0);
-					if(touching_ground){
-						set_state_sprite(Moving_sprite, 1, 0);
-					}else{
-						set_state_sprite(Jump_sprite, 1, 0);
-					}
-					
-				}else if(timer > 12*room_speed){
-					set_state_sprite(Idle_sprite, 1, 0);
-					wandering = 0;
-					timer = 0;
-					facing = - facing;
-					image_xscale = -image_xscale;
-				}
+				do_the_wander();
 			}else{
 				set_state_sprite(Idle_sprite, 1, 0);
+				idle = 1;
+				hsp = acceleration(current_speed,idle,facing,prev_facing,acc_rate,touching_ground,walksp);
 			}
 			if (!target) break;
 			if not instance_exists(target) break;
@@ -117,7 +71,7 @@ switch (state)  // State Machine \\
 	#region Chase State
 	
 		case "Chase":
-		
+			idle = 0;
 			if(touching_ground){
 				set_state_sprite(Moving_sprite, 1, 0);
 			}else{
@@ -125,7 +79,7 @@ switch (state)  // State Machine \\
 			}
 			if (!target) break;
 			if not instance_exists(target) break;
-			
+			prev_facing = facing;
 			facing = image_xscale;
 			var closest_enemy = instance_nearest(x,y,target);
 			var distance_to_closest_enemy = point_distance(x, y, closest_enemy.x, closest_enemy.y);
@@ -153,7 +107,7 @@ switch (state)  // State Machine \\
 						}else{
 							move_and_collide( -facing * walksp, (-below) * flysp);
 						}
-						move_and_collide(-facing * walksp, (-below) * flysp);
+						move_and_collide(-facing * walksp, (-below) * flysp); 
 					}else{
 						state = "Ranged Attack";
 					}
@@ -167,7 +121,10 @@ switch (state)  // State Machine \\
 				if(flying){
 					move_and_collide(facing * walksp, (-below) * flysp);
 				}else{
-					move_and_collide(facing * walksp, 0);
+					current_speed = hsp;
+					hsp = acceleration(current_speed,idle,facing,prev_facing,acc_rate,touching_ground,walksp);
+					//move_and_collide(facing * walksp, 0);
+					
 				}
 			}
 			
@@ -282,3 +239,4 @@ switch (state)  // State Machine \\
 	
 	#endregion
 }
+show_debug_message(hsp);

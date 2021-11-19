@@ -15,9 +15,7 @@
 #endregion
 
 #region swap weapon type Melee & Ranged
-
-	if(key_swap_weapon_type)
-	{
+	if(key_swap_weapon_type){
 		equiped_weapon_type = -equiped_weapon_type;
 	}
 
@@ -70,66 +68,50 @@
 
 #region Movement + Jumping
 	var move = key_right - key_left;
-	if(in_inventory)
-	{
+	if(in_inventory){
 		move = 0;
 	}
-	if(move == 0)
-	{
-		//stopped moving
-		if(prev_move == 1){
-			//was prev moving positive
-			acc_sign = -1;//slow down
-		}else if(prev_move == -1){
-			//was prev moving negative
-			acc_sign = 1;//slow down
+	if(rolled && touching_ground){
+		move = prev_move;
+	}
+	
+	if(move == 0){
+		idle = 1;
+		if(flag == 0){
+			flag = 1;
+			acc_sign = -prev_move;
 		}
-		current_speed = current_speed + 1.2*acc_sign*acc_rate;
-		if((current_speed <= 0) && (!acc_sign)) || ((current_speed >= 0) && (acc_sign)) {
-			current_speed = 0;
+	}else{
+		idle = 0;
+		if(flag == 1){
+			flag = 0;
+			acc_sign = move;
 		}
-	}else if(prev_move == move) ||(prev_move == move + 2) || (prev_move == move - 2){
-		//moving in same direction or changing direction
-		acc_sign = move;
-		if(sign(current_speed) == acc_sign){
-			//accelrate normally
-			current_speed = current_speed + acc_sign*acc_rate;
+	}
+	
+	current_speed = acceleration(current_speed,idle,move,prev_move,acc_rate,touching_ground,walksp);
+	// add jump boost if jumped
+	if(!touching_ground) && (jumped) && (sign(current_speed)) && (current_speed >= walksp){
+		if(rolled == 1){
+			current_speed = rollspd + jump_boost;
+			double_jumped = 0;
+			rolled = 2;
 		}else{
-			// braking decelerate more
-			current_speed = current_speed + 1.8*acc_sign*acc_rate;
+			show_debug_message("1");
+			current_speed += jump_boost;
 		}
 	}
-		
-	if(!touching_ground) && ((move == 1)|| (move == -1)){
-		current_speed = current_speed - acc_sign*acc_rate/3;
-	}
-		
-	//limit current speed to walksp or add jump boost if jumped
-	if(current_speed >= walksp )
-	{
-		current_speed = walksp;
-		if(!touching_ground) && (jumped){
-			if(rolled == 1){
-				current_speed = rollspd + jump_boost;
-				double_jumped = 0;
-				rolled = 2;
-			}else{
-				current_speed += jump_boost;
-				
-			}
-		}
-	}else if (current_speed <= -walksp ){
-		current_speed = -walksp;
-		if(!touching_ground) && (jumped){
-			if(rolled == 1){
-				current_speed = -rollspd - jump_boost;
-				double_jumped = 0;
-				rolled = 2;
-			}else{
-				current_speed -= jump_boost;
-			}
+	if(!touching_ground) && (jumped)&&(!sign(current_speed)) && (current_speed <= -walksp){
+		if(rolled == 1){
+			current_speed = -rollspd - jump_boost;
+			double_jumped = 0;
+			rolled = 2;
+		}else{
+			show_debug_message("2");
+			current_speed -= jump_boost;
 		}
 	}
+	
 		
 	vsp = vsp + grv;
 		
@@ -143,10 +125,9 @@
 	}else if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state == "Blocking"){
 		vsp = jump_height/2;
 		jumped = 1;
-	} 
+	}
 	
-
-	if(double_jumped == 0) and (key_jump) and (vsp != jump_height) and (!in_inventory){
+	if(double_jumped == 0) && (key_jump) && (vsp != jump_height) && (!in_inventory){
 		double_jumped = 1;
 		vsp = jump_height;
 		if(image_xscale == sign(current_speed)){
@@ -250,7 +231,6 @@ switch (state) // STATE MACHINE \\
 		}else{
 			rolled = 0;
 		}
-		
 		break; 
 		
 	
@@ -304,14 +284,16 @@ switch (state) // STATE MACHINE \\
 			
 			if (place_meeting(x,y+1,oSolid))
 			{
-				hsp = hsp*0; 
+				hsp = hsp*1.2; 
 			}
 			else
 			{
 				if (image_index > 2){
 					hsp = hsp*1.2;
-				//	vsp = 0.2;
-					}	
+					vsp = 0.2;
+					}
+				
+				
 			}
 			if animation_end()
 			{
@@ -349,8 +331,8 @@ switch (state) // STATE MACHINE \\
 			{
 				if (image_index > 2){
 					hsp = hsp*1.2;
-					//vsp = 0.2;
-					}
+					vsp = 0.2;
+				}
 				
 				
 			}
@@ -399,6 +381,7 @@ switch (state) // STATE MACHINE \\
 			if(touching_ground){
 				rolled = 1;
 				roll_jump = 1;
+				roll_dir = image_xscale;
 			}
 			if(double_jumped == 0){
 				hsp = image_xscale*rollspd;
@@ -481,4 +464,5 @@ switch (state) // STATE MACHINE \\
 		facing = sign(move);
 	}
 	
+
 #endregion

@@ -1,11 +1,10 @@
-// Inherit the parent event
 event_inherited();
 hsp = 0;
 vsp = 2;
 grv = 0.3;
 walksp = 0.4;
 jump_height = 2.5;
-wanderer = 0;
+wanderer = 1;
 
 ranged_flag = 0;
 attack_distance = 32;
@@ -21,8 +20,8 @@ Attack_sprite = BananaGuardIdle;
 Moving_sprite = BananaGuardRunning;
 Damage_sprite = BananaGuardIdle;
 Ranged_sprite = BananaGuardIdle;
-Jump_sprite = BananaGuardIdle;
-Feared_sprite = BananaGuardIdle;
+Jump_sprite = BananaGuardRunning;
+Feared_sprite = BananaGuardRunning;
 Hurt_sprite = BananaGuardIdle;
 Death_sprite = BananaGuardIdle;
 

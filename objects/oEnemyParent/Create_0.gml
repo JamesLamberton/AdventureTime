@@ -1,3 +1,4 @@
+
 event_inherited();
 
 //all place holders
@@ -54,3 +55,4 @@ drop = 0;//used to store object that is dropped
 chance_evaluated = 0;
 
 state = "Idle";
+

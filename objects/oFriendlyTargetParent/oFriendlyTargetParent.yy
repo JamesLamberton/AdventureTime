@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Parents",
-    "path": "folders/Objects/LifeForms/Parents.yy",
+    "name": "LifeForms",
+    "path": "folders/Objects/LifeForms.yy",
   },
   "resourceVersion": "1.0",
   "name": "oFriendlyTargetParent",

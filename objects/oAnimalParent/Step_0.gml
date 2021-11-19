@@ -36,7 +36,7 @@ vsp = vsp + grv;
 	}
 	
 #endregion
-
+show_debug_message(hsp);
 switch (state)  // State Machine \\
 {
 	#region Idle State 
@@ -45,45 +45,12 @@ switch (state)  // State Machine \\
 		sneaking = 0;
 			if(wanderer){
 				timer++;
-				if(timer > 4*room_speed) && (timer <= 6*room_speed){
-					//wander one way
-					wandering = 1;
-					toggle = 0;
-					move_and_collide(facing * walksp, 0);
-					if(touching_ground){
-						set_state_sprite(Moving_sprite, 1, 0);
-					}else{
-						set_state_sprite(Jump_sprite, 1, 0);
-					}
-				}else if(timer > 6*room_speed) && (timer <= 10*room_speed){
-					//idle again
-					set_state_sprite(Idle_sprite, 1, 0);
-					wandering = 0;
-					if(toggle == 0){
-						facing = - facing;
-						image_xscale = -image_xscale;
-						toggle = 1;
-					}
-				}else if(timer > 10*room_speed) && (timer <= 12*room_speed){
-					//wander the other way
-					wandering = 1;
-					toggle = 0;
-					move_and_collide(facing * walksp, 0);
-					if(touching_ground){
-						set_state_sprite(Moving_sprite, 1, 0);
-					}else{
-						set_state_sprite(Jump_sprite, 1, 0);
-					}
-					
-				}else if(timer > 12*room_speed){
-					set_state_sprite(Idle_sprite, 1, 0);
-					wandering = 0;
-					timer = 0;
-					facing = - facing;
-					image_xscale = -image_xscale;
-				}
+				do_the_wander();
+				
 			}else{
+				idle = 1;
 				set_state_sprite(Idle_sprite, 1, 0);
+				hsp = acceleration(current_speed,idle,facing,prev_facing,acc_rate,touching_ground,walksp);
 			}
 			if not instance_exists(oAnimalParent) break;
 			
@@ -126,19 +93,23 @@ switch (state)  // State Machine \\
 	
 	#region Sneak State
 		case "Sneak":
+			idle = 0;
 			set_state_sprite(Sneak_sprite, 1, 0);
+			prev_facing = facing;
 			facing = image_xscale;
 		break;
 	#endregion
 	
 	#region Flee State
 		case "Flee":
+			idle = 0;
 			if(touching_ground){
 				set_state_sprite(Feared_sprite, 1.5, 0);
 			}else{
 				set_state_sprite(Jump_sprite, 1, 0);
 			}
 			image_xscale = current_predator.image_xscale;
+			prev_facing = facing;
 			facing = image_xscale;
 			var _x = x;
 			x -= 10000000;//yeet it
@@ -169,7 +140,8 @@ switch (state)  // State Machine \\
 			if(flying){
 				move_and_collide(facing * chase_speed, (-below) * flysp);
 			}else{
-				move_and_collide(facing * chase_speed, 0);
+				hsp = acceleration(current_speed,idle,facing,prev_facing,acc_rate,touching_ground,walksp);
+				//move_and_collide(facing * chase_speed, 0);
 			}
 			
 			if distance_to_closest_animal < chase_distance && predator > closest_animal.predator && distance_to_current_predator > flee_distance
@@ -193,6 +165,7 @@ switch (state)  // State Machine \\
 	#region Chase State
 	
 		case "Chase":
+			idle = 0;
 			if(touching_ground){
 				set_state_sprite(Moving_sprite, 1.5, 0);
 			}else{
@@ -203,7 +176,7 @@ switch (state)  // State Machine \\
 				state = "Idle";
 				break;
 			}
-			
+			prev_facing = facing;
 			facing = image_xscale;
 			var _x = x;
 			x -= 10000000;//yeet it
@@ -235,6 +208,7 @@ switch (state)  // State Machine \\
 			{
 				image_xscale = 1;
 			}
+			prev_facing = facing;
 			facing = image_xscale;
 			below = sign(y - closest_animal.y + follow_height);
 			
@@ -254,7 +228,9 @@ switch (state)  // State Machine \\
 				if(flying){
 					move_and_collide(facing * chase_speed, (-below) * flysp);
 				}else{
-					move_and_collide(facing * chase_speed, 0);
+					current_speed = hsp;
+					hsp = acceleration(current_speed,idle,facing,prev_facing,acc_rate,touching_ground,chase_speed);
+					//move_and_collide(facing * chase_speed, 0);
 				}
 			}
 			

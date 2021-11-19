@@ -7,6 +7,7 @@ target = -1;//instance that provoked this neutral
 wanderer = 0;
 wandering = 0;
 toggle = 0;
+timer = 0;
 friendly = 0;//neutral enemy
 player_provokable = 0;
 //all place holders
