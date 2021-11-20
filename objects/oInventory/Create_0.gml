@@ -18,3 +18,4 @@ equip_enable = 0;
 first_open = 1;
 
 
+

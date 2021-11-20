@@ -2,17 +2,21 @@ if not instance_exists(oPlayer) exit;
 
 if(open == 1){
 	depth = 0;
+	/*
 	key_left = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"));
 	key_right = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"));
 	key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 	key_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
+	*/
 	key_equip = keyboard_check_pressed(ord("E"));
 	x = lerp(oPlayer.x,oPlayer.x, 0.5) - 25;
 	y = lerp(oPlayer.y,oPlayer.y, 0.5) - 70;
+	
 	if(first_open){
 		draw_select = 0;
 		first_open = 0;
 	}
+	/*
 	if(key_left){
 		draw_select--;
 		for(var i = 0; i <= (INVENTORY_SLOTS_SMALL/row_length - 1); i++){
@@ -41,7 +45,17 @@ if(open == 1){
 			draw_select = draw_select - INVENTORY_SLOTS_SMALL;
 		}
 	}
+	*/
 	
+	for(var i = 0; i < INVENTORY_SLOTS_SMALL; i++){
+		var left_wall = (x + (i mod row_length) * (cell_size + gap) - 2);
+		var right_wall = left_wall + cell_size - 1;
+		var upper_wall = (y + (i div row_length) * (cell_size + gap) - 2);
+		var lower_wall = upper_wall + cell_size - 1;
+		if(mouse_x >= left_wall) && (mouse_x <= right_wall) && (mouse_y >= upper_wall) && (mouse_y <= lower_wall){
+			draw_select = i;
+		}
+	}
 	if(inventory[draw_select] != -1){
 		
 		var selected_item = list_of_item_object_reference[inventory[draw_select]];

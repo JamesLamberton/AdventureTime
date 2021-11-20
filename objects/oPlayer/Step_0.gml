@@ -97,7 +97,7 @@
 			double_jumped = 0;
 			rolled = 2;
 		}else{
-			show_debug_message("1");
+			
 			current_speed += jump_boost;
 		}
 	}
@@ -107,7 +107,7 @@
 			double_jumped = 0;
 			rolled = 2;
 		}else{
-			show_debug_message("2");
+			
 			current_speed -= jump_boost;
 		}
 	}

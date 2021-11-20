@@ -239,4 +239,3 @@ switch (state)  // State Machine \\
 	
 	#endregion
 }
-show_debug_message(hsp);
