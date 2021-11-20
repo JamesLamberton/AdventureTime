@@ -10,6 +10,7 @@
 	key_block = mouse_check_button_pressed(mb_right);
 	key_block_stopped = mouse_check_button_released(mb_right);
 	key_swap_weapon_type = keyboard_check_pressed(ord("Z"));
+	key_esc = keyboard_check_pressed(vk_escape);
 	
 	
 #endregion
@@ -140,6 +141,15 @@
 	}
 	hsp = current_speed;
 	prev_move = move;
+#endregion
+
+#region shop toggle
+	if (in_shop)&& (!key_esc) && !instance_exists(oTextbox){
+		
+	}else if(in_shop) && (key_esc) && !instance_exists(oTextbox){
+		in_shop = 0;
+		
+	}
 #endregion
 
 #region Inventory toggle

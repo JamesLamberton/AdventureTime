@@ -151,6 +151,7 @@ if accept_key
 			}
 			
 			instance_destroy(); 
+			
 		}
 	}
 	else // If not done typing

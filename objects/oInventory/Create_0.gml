@@ -1,5 +1,6 @@
 #macro INVENTORY_SLOTS_SMALL 6
 
+
 row_length = 3;
 cell_size = 17;
 bottom_border = 13;
