@@ -1,4 +1,5 @@
 event_inherited();
+text_id = "";
 hsp = 0;
 vsp = 2;
 grv = 0.3;
