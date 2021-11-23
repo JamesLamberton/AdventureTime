@@ -1,34 +1,9 @@
-event_inherited();
-
-key_equip = keyboard_check_pressed(ord("E"));
-
-if(key_equip){
-	if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){
-		//item is blood_sword
-		oPlayer.melee_weapon.inventory_index = oPlayer.blood_sword.inventory_index;
-		oPlayer.blood_sword.inventory_index = 0;//set as main weapon index
-		oPlayer.inventory.inventory[0] = oPlayer.blood_sword.weapon_reference;
-		oPlayer.inventory.inventory[oPlayer.melee_weapon.inventory_index] = oPlayer.melee_weapon.weapon_reference;
-		oPlayer.melee_weapon = oPlayer.blood_sword;
-					
-					
-	}else if (oPlayer.scarlet != -1) && (draw_select == oPlayer.scarlet.inventory_index){
-		//item is scarlet
-		oPlayer.melee_weapon.inventory_index = oPlayer.scarlet.inventory_index;
-		oPlayer.scarlet.inventory_index = 0;//set as main weapon index
-		oPlayer.inventory.inventory[0] = oPlayer.scarlet.weapon_reference;
-		oPlayer.inventory.inventory[oPlayer.melee_weapon.inventory_index] = oPlayer.melee_weapon.weapon_reference;
-		oPlayer.melee_weapon = oPlayer.scarlet;
-					
-	}
-}
-/*
 if not instance_exists(oPlayer) exit;
 
 if(open == 1){
 	depth = 0;
 	
-	key_equip = keyboard_check_pressed(ord("E"));
+	
 	x = lerp(oPlayer.x,oPlayer.x, 0.5) - 25;
 	y = lerp(oPlayer.y,oPlayer.y, 0.5) - 70;
 	
@@ -62,7 +37,7 @@ if(open == 1){
 				description_scarlet = 1;
 				description_demon_sword = 0;
 			}
-			
+			/*
 			if(key_equip){
 				if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){
 					//item is blood_sword
@@ -83,7 +58,7 @@ if(open == 1){
 					
 				}
 			}
-			
+			*/
 		
 		}else{
 			
@@ -103,4 +78,3 @@ if(open == 1){
 	draw_select = -1;
 	first_open = 1;
 }
-*/
