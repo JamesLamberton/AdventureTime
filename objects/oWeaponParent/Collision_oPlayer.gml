@@ -1,7 +1,7 @@
 if(collision == 0) && (!weapon_in_inventory){
 	collision = 1;
 	alarm[0] = 5*room_speed;
-	for(var j = 0; j < INVENTORY_SLOTS_SMALL; j++){
+	for(var j = 0; j < oPlayer.inventory.slot_num; j++){
 		if(oPlayer.inventory.inventory[j] == -1){
 			//found vacant spot at j
 			if(inventory_index == oPlayer.inventory.inventory[j]){
@@ -28,7 +28,7 @@ if(collision == 0) && (!weapon_in_inventory){
 			break;
 		}
 	}
-	if(j == INVENTORY_SLOTS_SMALL){
+	if(j == oPlayer.inventory.slot_num){
 		//did not find an empty slot
 		draw_failed_pick_up = 1;
 	}
