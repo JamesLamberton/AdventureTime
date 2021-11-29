@@ -39,6 +39,7 @@ scarlet.inventory_index = 0;
 blood_sword = -1;
 
 potion_count = 1;
+potion_max = 10;
 in_inventory = 0;
 coin = 0;
 in_shop = 0;
@@ -46,7 +47,8 @@ in_shop = 0;
 equiped_weapon_type = 1;//select melee 1, or ranged -1
 melee_weapon = scarlet;
 melee_weapon.weapon_in_inventory = 1;
-ammo = 8;
+ammo = 5;
+ammo_max = 5;
 ranged_projectile_height = 6;
 ammo_type = oBolt;
 

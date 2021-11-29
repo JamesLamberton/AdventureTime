@@ -23,6 +23,7 @@ function game_text(_text_id)
 			add_text("Take a look!","ChooseGoose", -1);
 			
 			oPlayer.in_shop = 1;
+			shop_initialise(_text_id);
 		break;
 		
 		case "ChooseGoose-TradeNo":

@@ -163,6 +163,7 @@
     {"id":{"name":"GoldCoin","path":"sprites/GoldCoin/GoldCoin.yy",},"order":5,},
     {"id":{"name":"sndTalk4","path":"sounds/sndTalk4/sndTalk4.yy",},"order":3,},
     {"id":{"name":"sExperience","path":"sprites/sExperience/sExperience.yy",},"order":1,},
+    {"id":{"name":"shop_initialise","path":"scripts/shop_initialise/shop_initialise.yy",},"order":15,},
     {"id":{"name":"rm01","path":"rooms/rm01/rm01.yy",},"order":2,},
   ],
   "Options": [
