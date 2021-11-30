@@ -30,7 +30,11 @@ inventory.inventory[0] = current_weapon_inventory_id;//give sword
 inventory.inventory[inventory.row_length - 1] = 0;//give arrows INVENTORY SLOT RESERVED
 inventory.inventory[inventory.row_length - 2] = 2;//give health potion INVENTORY SLOT RESERVED
 
-inventory = instance_create_layer(x,y,"Inventory",oShopInventory);
+shop_inventory = instance_create_layer(x,y,"Inventory",oShopInventory);
+current_store_stage = 0;//different stages of the game will allow more items to be displayed
+shop_no_no_list = ds_list_create();
+ds_list_add(shop_no_no_list,1);
+
 
 
 //list of sword instances

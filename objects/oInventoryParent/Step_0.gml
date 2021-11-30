@@ -29,7 +29,7 @@ if(open == 1){
 		if(selected_item == oYellowSword ) ||(selected_item == oDemonSword ){
 			//can equip item is weapon
 			
-			
+			/*
 			if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){
 				description_demon_sword = 1;
 				description_scarlet = 0;
@@ -37,6 +37,7 @@ if(open == 1){
 				description_scarlet = 1;
 				description_demon_sword = 0;
 			}
+			*/
 			/*
 			if(key_equip){
 				if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){

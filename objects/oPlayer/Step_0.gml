@@ -300,7 +300,7 @@ switch (state) // STATE MACHINE \\
 			{
 				if (image_index > 2){
 					hsp = hsp*1.2;
-					vsp = 0.2;
+					//vsp = 0.2;
 					}
 				
 				
@@ -341,7 +341,7 @@ switch (state) // STATE MACHINE \\
 			{
 				if (image_index > 2){
 					hsp = hsp*1.2;
-					vsp = 0.2;
+					//vsp = 0.2;
 				}
 				
 				
