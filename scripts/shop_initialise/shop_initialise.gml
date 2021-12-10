@@ -2,13 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function shop_initialise(merchant){
 	var list_to_add = ds_list_create();
-	for(var i = 0; i < array_length(oPlayer.shop_inventory); i++){
-		oPlayer.shop_inventory[i] = -1;//reset everything	
+	for(var i = 0; i < array_length(oStoreManager.shop_inventory); i++){
+		oStoreManager.shop_inventory[i] = -1;//reset everything	
 	}
 	
 	//choose goose - anything
 	if(merchant == "ChooseGoose"){
-		if(oPlayer.current_store_stage == 0){
+		if(oStoreManager.current_store_stage == 0){
 			
 		}else{
 			
