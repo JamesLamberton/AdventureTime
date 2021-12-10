@@ -145,9 +145,10 @@
 
 #region shop toggle
 	if (in_shop)&& (!key_esc) && !instance_exists(oTextbox){
-		
+		oStoreManager.shop_inventory.open = 1;
 	}else if(in_shop) && (key_esc) && !instance_exists(oTextbox){
 		in_shop = 0;
+		oStoreManager.shop_inventory.open = 0;
 		
 	}
 #endregion

@@ -1,0 +1,1 @@
+refresh_stock = 1;
