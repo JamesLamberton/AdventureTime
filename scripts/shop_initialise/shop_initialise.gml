@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function shop_initialise(merchant){
-	show_debug_message(merchant);
+	
 	var list_to_add = ds_list_create();
 	for(var i = 0; i < array_length(oStoreManager.shop_inventory); i++){
 		oStoreManager.shop_inventory[i] = -1;//reset everything	
