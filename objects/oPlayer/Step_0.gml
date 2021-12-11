@@ -69,7 +69,7 @@
 
 #region Movement + Jumping
 	var move = key_right - key_left;
-	if(in_inventory){
+	if(in_inventory) || (in_shop) || (in_dialogue){
 		move = 0;
 	}
 	if(rolled && touching_ground){
@@ -116,19 +116,20 @@
 		
 	vsp = vsp + grv;
 		
-	if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state != "Blocking")
+	if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state != "Blocking") and (!in_shop) and (!in_dialogue)
 	{
 			
 		vsp = jump_height;
 		jumped = 1;
 			
 			
-	}else if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state == "Blocking"){
+	}else if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state == "Blocking") and (!in_dialogue)
+	{
 		vsp = jump_height/2;
 		jumped = 1;
 	}
 	
-	if(double_jumped == 0) && (key_jump) && (vsp != jump_height) && (!in_inventory){
+	if(double_jumped == 0) && (key_jump) && (vsp != jump_height) && (!in_inventory) && (!in_shop) && (!in_dialogue){
 		double_jumped = 1;
 		vsp = jump_height;
 		if(image_xscale == sign(current_speed)){
@@ -143,24 +144,40 @@
 	prev_move = move;
 #endregion
 
+#region dialogue toggle
+	if in_dialogue{
+		
+		state = "Speaking";
+		
+	}else if(in_shop) && (key_esc) && !instance_exists(oTextbox){
+		state = "Move";
+		
+		
+	}
+#endregion
+
 #region shop toggle
-	if (in_shop)&& (!key_esc) && !instance_exists(oTextbox){
+	if (in_shop)&& (!key_esc) && !instance_exists(oTextbox) && in_dialogue{
 		oStoreManager.shop_inventory.open = 1;
+		state = "Checking Shop";
+		in_dialogue = 0;
 	}else if(in_shop) && (key_esc) && !instance_exists(oTextbox){
 		in_shop = 0;
+		state = "Move";
 		oStoreManager.shop_inventory.open = 0;
 		
 	}
 #endregion
 
+
 #region Inventory toggle
 	
-	if((key_inventory)&&(!in_inventory))
+	if((key_inventory)&&(!in_inventory)) and (!in_shop)
 	{
 		state = "Checking Inventory";
 	}
 	
-	else if((in_inventory) && (key_inventory))
+	else if((in_inventory) && (key_inventory)) and (!in_shop)
 	{
 		inventory.open = 0;
 		state = "Move";
@@ -267,6 +284,24 @@ switch (state) // STATE MACHINE \\
 				blocking_toggle = 0;
 				blocking = 0;
 			}
+			
+		break;
+	#endregion 
+	
+	#region Checking Inventory state
+		case "Checking Shop":
+		
+			in_shop = 1;
+			sprite_index = FinnIdle;
+			
+		break;
+	#endregion 
+	
+	#region In Dialogue state
+		case "Speaking":
+		
+			in_dialogue = 1;
+			sprite_index = FinnIdle;
 			
 		break;
 	#endregion 

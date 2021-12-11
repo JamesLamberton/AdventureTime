@@ -153,6 +153,7 @@ if accept_key
 			}
 			
 			instance_destroy(); 
+			oPlayer.in_dialogue = 0;
 			
 		}
 	}

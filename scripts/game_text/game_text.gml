@@ -1,6 +1,7 @@
 /// @param text_id
 function game_text(_text_id)
 {
+	oPlayer.in_dialogue = 1;
 	switch(_text_id)
 	{
 		
