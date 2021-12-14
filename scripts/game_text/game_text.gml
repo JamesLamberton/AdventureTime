@@ -71,6 +71,7 @@ function game_text(_text_id)
 			
 			oJake.text_id = "JakeQuest01-Yes";
 			oQuest.quest = "findBemo";
+			oBemo.isObjective = true;
 		break;
 		
 		case "JakeQuest01-Finished":
@@ -78,6 +79,7 @@ function game_text(_text_id)
 			
 			oQuest.quest = "noQuest";
 			oJake.text_id = "JakeQuest02";
+			
 		break;
 		
 		case "JakeQuest02":
@@ -92,6 +94,7 @@ function game_text(_text_id)
 	
 	case "Bemo":
 	
+		oBemo.isObjective = false;
 		add_text("Finn you found me!","Bemo",-1);
 		add_text("Bemo what are you doing down here?","Finn",1);
 		add_text("Sorry Finn, I wanted to go adventuring but got lost","Bemo",-1);

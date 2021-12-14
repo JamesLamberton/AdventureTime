@@ -64,6 +64,8 @@
 	}
 	y = y + vsp;
 
+	
+	
 #endregion
 
 #region Movement + Jumping
@@ -273,10 +275,7 @@ switch (state) // STATE MACHINE \\
 	#region Attack State 
 	
 		case "Attack":
-			if (hsp == 0){
-				hsp = 1.5;
-			}
-			set_state_sprite(melee_weapon.attack_sprite, 1, 0);
+			set_state_sprite(FinnAttackOne, 1.25, 0);
 			if animation_hit_frame(melee_weapon.hit_frame)
 			{
 				finn_box = create_hitbox(x, y, self, melee_weapon.damage_sprite, melee_weapon.knockback, 4, melee_weapon.damage, image_xscale);
@@ -332,9 +331,7 @@ switch (state) // STATE MACHINE \\
 				if (image_index > 2){
 					hsp = hsp*1.2;
 					vsp = 0.2;
-				}
-				
-				
+				}		
 			}
 		
 			if animation_end()
