@@ -13,7 +13,7 @@ list_of_item_prices = [3,0,5,100];
 
 
 open = 0;
-draw_select = -1;
+draw_select = 0;
 description_scarlet = 0;
 description_demon_sword = 0;
 text_box = 0;

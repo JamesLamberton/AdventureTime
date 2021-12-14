@@ -41,7 +41,7 @@ blood_sword = -1;
 potion_count = 1;
 potion_max = 10;
 in_inventory = 0;
-coin = 0;
+coin = 20;
 in_shop = 0;
 in_dialogue = 0;
 
