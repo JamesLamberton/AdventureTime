@@ -13,9 +13,6 @@ function shop_initialise(merchant){
 			oStoreManager.shop_inventory.inventory[0] = 2;
 			oStoreManager.shop_inventory.inventory[1] = 0;
 			
-			if(ds_list_find_index(oStoreManager.shop_no_no_list, 3) == -1 ){//demon blood sword
-				oStoreManager.shop_inventory.inventory[2] = 3;
-			}
 			
 		}else{
 			
