@@ -1,7 +1,7 @@
 
 event_inherited();
 
-key_buy = keyboard_check_pressed(ord("E"));
+key_buy = mouse_check_button_pressed(mb_left);
 
 if(key_buy) && (oPlayer.in_shop){
 	

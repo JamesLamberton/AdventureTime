@@ -19,5 +19,5 @@ description_demon_sword = 0;
 text_box = 0;
 
 first_open = 1;
-
+key_buy = 0;
 
