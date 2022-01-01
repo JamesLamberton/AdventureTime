@@ -133,9 +133,8 @@ else
 
 
 #region Flip Through Pages
-if accept_key 
-{
-	
+if accept_key
+{	
 	
 	if draw_char == text_length[page] // If typing is done, go to next page
 	{

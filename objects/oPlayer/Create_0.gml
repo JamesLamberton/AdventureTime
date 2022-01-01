@@ -44,6 +44,7 @@ in_inventory = 0;
 coin = 20;
 in_shop = 0;
 in_dialogue = 0;
+block_dialogue = 0;
 
 equiped_weapon_type = 1;//select melee 1, or ranged -1
 melee_weapon = scarlet;

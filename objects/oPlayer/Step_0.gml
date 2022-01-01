@@ -161,10 +161,13 @@
 		oStoreManager.shop_inventory.open = 1;
 		state = "Checking Shop";
 		in_dialogue = 0;
+		block_dialogue = 1;
+		
 	}else if(in_shop) && (key_esc) && !instance_exists(oTextbox){
 		in_shop = 0;
 		state = "Move";
 		oStoreManager.shop_inventory.open = 0;
+		block_dialogue = 0;
 		
 	}
 #endregion
