@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sInventoryBorder",
+    "path": "sprites/sInventoryBorder/sInventoryBorder.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
