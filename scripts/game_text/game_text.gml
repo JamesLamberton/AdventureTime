@@ -25,7 +25,7 @@ function game_text(_text_id)
 			
 			oPlayer.in_shop = 1;
 			shop_initialise(_text_id);
-			oStoreManager.current_owner = "Choose Gooose";
+			oStoreManager.current_owner = "Choose Goose";
 		break;
 		
 		case "ChooseGoose-TradeNo":

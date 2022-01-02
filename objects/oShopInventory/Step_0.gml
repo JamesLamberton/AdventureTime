@@ -7,7 +7,7 @@ if(key_buy) && (oPlayer.in_shop){
 	
 	if(inventory[draw_select] != -1){//item found
 		
-		if(oPlayer.coin >= list_of_item_prices[inventory[draw_select]]){
+		if(oPlayer.coin >= list_of_item_prices[inventory[draw_select]]) && (oStoreManager.choose_goose_num[|draw_select] > 0){
 			
 			oPlayer.coin -= list_of_item_prices[inventory[draw_select]];
 			if(list_of_item_object_reference[inventory[draw_select]] == oBolt){
