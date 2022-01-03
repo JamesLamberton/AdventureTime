@@ -145,14 +145,18 @@
 #endregion
 
 #region dialogue toggle
-	if in_dialogue{
+	if in_dialogue && instance_exists(oTextbox){
 		
 		state = "Speaking";
 		
 	}else if(in_shop) && (key_esc) && !instance_exists(oTextbox){
 		state = "Move";
+		in_dialogue = 0;
 		
+	}else if(in_dialogue) && !instance_exists(oTextbox){
+		state = "Move";
 		
+		in_dialogue = 0;
 	}
 #endregion
 
