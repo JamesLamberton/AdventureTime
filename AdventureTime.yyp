@@ -7,6 +7,7 @@
     {"id":{"name":"draw_9slice","path":"scripts/draw_9slice/draw_9slice.yy",},"order":11,},
     {"id":{"name":"oExperience","path":"objects/oExperience/oExperience.yy",},"order":1,},
     {"id":{"name":"sSlotSelected","path":"sprites/sSlotSelected/sSlotSelected.yy",},"order":14,},
+    {"id":{"name":"oHomeInventory","path":"objects/oHomeInventory/oHomeInventory.yy",},"order":13,},
     {"id":{"name":"fade_to_room","path":"scripts/fade_to_room/fade_to_room.yy",},"order":9,},
     {"id":{"name":"FinnAttackDemonSword","path":"sprites/FinnAttackDemonSword/FinnAttackDemonSword.yy",},"order":14,},
     {"id":{"name":"sMenuSlot","path":"sprites/sMenuSlot/sMenuSlot.yy",},"order":2,},

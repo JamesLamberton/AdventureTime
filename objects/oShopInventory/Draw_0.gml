@@ -3,6 +3,13 @@ event_inherited();
 draw_text_transformed_colour(x + (row_length - 1)*cell_size + 2*border_size,y + (slot_num/row_length)*cell_size + 2*border_size,string(oPlayer.coin),0.2,0.2,0,c_white,c_white,c_white,c_white, 1);
 draw_sprite_ext(GoldCoin,0,x + (row_length - 1)*cell_size,y + (slot_num/row_length)*cell_size + border_size + bottom_border/2 + 3,0.40,0.4,0,c_white,1);
 
+draw_text_transformed_colour(x ,y + (slot_num/row_length)*cell_size + 2*border_size,"Cost:",0.2,0.2,0,c_white,c_white,c_white,c_white, 1);
+
+if(inventory[draw_select] != -1){
+	draw_text_transformed_colour(x + 15,y + (slot_num/row_length)*cell_size + 2*border_size,string(list_of_item_prices[inventory[draw_select]]),0.2,0.2,0,c_white,c_white,c_white,c_white, 1);
+
+}
+
 if(oStoreManager.current_owner == "Choose Goose"){
 	
 	for(var j = 0; j < ds_list_size(oStoreManager.choose_goose_num); j++){

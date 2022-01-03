@@ -153,7 +153,7 @@
 		state = "Move";
 		in_dialogue = 0;
 		
-	}else if(in_dialogue) && !instance_exists(oTextbox){
+	}else if(in_dialogue) && !instance_exists(oTextbox) && !(in_shop){
 		state = "Move";
 		
 		in_dialogue = 0;
