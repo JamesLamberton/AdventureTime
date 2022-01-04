@@ -22,4 +22,11 @@ for(var i = 0; i < slot_num; i++){
 		draw_sprite(sSlotSelected,0,xx,yy);
 	}
 }
-
+if(cant_drop){
+	draw_text_transformed_colour(oPlayer.x,oPlayer.y - 20 - ((100 - k)/3), "Cant Drop Equipped",0.25,0.25,0,c_red,c_red,c_red,c_red,k/75);
+	k--;
+	if(k < 0){
+		cant_drop = 0;
+		k = 100;
+	}
+}

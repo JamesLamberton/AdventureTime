@@ -1,6 +1,7 @@
 event_inherited();
 
 key_equip = keyboard_check_pressed(ord("E"));
+key_drop = keyboard_check_pressed(ord("Q"));
 
 if(key_equip){
 	if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){
@@ -20,6 +21,26 @@ if(key_equip){
 		oPlayer.inventory.inventory[oPlayer.melee_weapon.inventory_index] = oPlayer.melee_weapon.weapon_reference;
 		oPlayer.melee_weapon = oPlayer.scarlet;
 					
+	}
+}
+
+if(key_drop){
+	if(draw_select == 0){
+		cant_drop = 1;
+	}else if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){
+		oPlayer.blood_sword.weapon_in_inventory = 0;
+		oPlayer.blood_sword.x = oPlayer.x + oPlayer.facing*40;
+		oPlayer.blood_sword.y = oPlayer.y - 40;
+		oPlayer.blood_sword.draw_weapon_text = 0;
+		oPlayer.blood_sword = -1;
+		oPlayer.inventory.inventory[draw_select] = -1;
+	}else if(oPlayer.scarlet != -1) && (draw_select == oPlayer.scarlet.inventory_index){
+		oPlayer.scarlet.weapon_in_inventory = 0;
+		oPlayer.scarlet.x = oPlayer.x + oPlayer.facing*40;
+		oPlayer.scarlet.y = oPlayer.y - 40;
+		oPlayer.scarlet.draw_weapon_text = 0;
+		oPlayer.scarlet = -1;
+		oPlayer.inventory.inventory[draw_select] = -1;
 	}
 }
 /*

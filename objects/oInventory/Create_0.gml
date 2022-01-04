@@ -18,6 +18,7 @@ text_box = 0;
 
 first_open = 1;
 
+cant_drop = 0;
 
-
+k = 100;
 
