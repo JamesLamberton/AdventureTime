@@ -1,0 +1,1 @@
+home_inventory = instance_create_layer(x,y,"Inventory",oHomeInventory);
