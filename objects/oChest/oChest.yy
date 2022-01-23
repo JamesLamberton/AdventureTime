@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite87",
-    "path": "sprites/Sprite87/Sprite87.yy",
+    "name": "sChest",
+    "path": "sprites/sChest/sChest.yy",
   },
   "solid": false,
   "visible": true,

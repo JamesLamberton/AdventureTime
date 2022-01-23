@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite86",
-    "path": "sprites/Sprite86/Sprite86.yy",
+    "name": "sDropOff",
+    "path": "sprites/sDropOff/sDropOff.yy",
   },
   "solid": false,
   "visible": true,

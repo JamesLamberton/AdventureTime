@@ -32,7 +32,6 @@ inventory.inventory[inventory.row_length - 2] = 2;//give health potion INVENTORY
 
 
 
-
 //list of sword instances
 scarlet = instance_create_layer(x,y - 10,"Instances",inventory.list_of_item_object_reference[current_weapon_inventory_id]);
 scarlet.inventory_index = 0;
