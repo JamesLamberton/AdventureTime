@@ -69,7 +69,7 @@
 
 #region Movement + Jumping
 	var move = key_right - key_left;
-	if(in_inventory) || (in_shop) || (in_dialogue){
+	if(in_inventory) || (in_shop) || (in_dialogue) || (in_home_inv){
 		move = 0;
 	}
 	if(rolled && touching_ground){
@@ -116,20 +116,20 @@
 		
 	vsp = vsp + grv;
 		
-	if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state != "Blocking") and (!in_shop) and (!in_dialogue)
+	if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state != "Blocking") and (!in_shop) and (!in_dialogue) and (!in_home_inv)
 	{
 			
 		vsp = jump_height;
 		jumped = 1;
 			
 			
-	}else if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state == "Blocking") and (!in_dialogue)
+	}else if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state == "Blocking") and (!in_dialogue) and (!in_home_inv)
 	{
 		vsp = jump_height/2;
 		jumped = 1;
 	}
 	
-	if(double_jumped == 0) && (key_jump) && (vsp != jump_height) && (!in_inventory) && (!in_shop) && (!in_dialogue){
+	if(double_jumped == 0) && (key_jump) && (vsp != jump_height) && (!in_inventory) && (!in_shop) && (!in_dialogue) && (!in_home_inv){
 		double_jumped = 1;
 		vsp = jump_height;
 		if(image_xscale == sign(current_speed)){
@@ -241,7 +241,7 @@ switch (state) // STATE MACHINE \\
 			else if air_attack == 1{
 				state = "Move";
 			}
-			else if (touching_ground){
+			else if (touching_ground) && (!in_home_inv){
 				state = "Attack";
 			}
 		}
@@ -251,9 +251,11 @@ switch (state) // STATE MACHINE \\
 			state = "Ranged Attack";
 		}
 		
-		if (key_roll and place_meeting(x,y+1,oSolid ))|| (double_jumped == 1)
+		if ((key_roll and place_meeting(x,y+1,oSolid ))|| (double_jumped == 1))&&(!in_home_inv)
 		{
-			state = "Roll";
+			state = "Roll";   
+			
+			
 			
 		}
 		
