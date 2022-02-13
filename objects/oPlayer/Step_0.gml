@@ -461,5 +461,4 @@ switch (state) // STATE MACHINE \\
 		facing = sign(move);
 	}
 	
-
 #endregion
