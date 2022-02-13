@@ -65,6 +65,16 @@ function add_text(_text)
 				snd[page_number] = sndTalk4; 
 			break;
 			
+			case "Bemo":
+				speaker_sprite[page_number] = BemoPortrait;
+				snd[page_number] = sndTalk1;
+			break;
+			
+			case "Jake":
+				speaker_sprite[page_number] = JakePortrait;
+				snd[page_number] = sndTalk3;
+			break; 
+			
 		}
 	}
 	

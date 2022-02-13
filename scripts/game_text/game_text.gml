@@ -56,5 +56,52 @@ function game_text(_text_id)
 		
 	#endregion
 	
+	#region Jake 
+	
+		case "Jake":
+			add_text("Hey Finn","Jake",-1);
+			add_text("Bemo's gone missing! Do you recon you can go and find him?","Jake",-1);
+				text_option("Sure","JakeQuest01-Yes");
+				text_option("Not right now","JakeQuest01-No");	
+		break;
+		
+		case "JakeQuest01-Yes":
+			add_text("Yeah sure","Finn",1);
+			add_text("Good luck Finn!","Jake",-1);
+			
+			oJake.text_id = "JakeQuest01-Yes";
+			oQuest.quest = "findBemo";
+			oBemo.isObjective = true;
+		break;
+		
+		case "JakeQuest01-Finished":
+			add_text("You found bemo! thanks Finn!","Jake",-1);
+			
+			oQuest.quest = "noQuest";
+			oJake.text_id = "JakeQuest02";
+			
+		break;
+		
+		case "JakeQuest02":
+		
+			add_text("Hey Finn! hope the adventuring is going well", "Jake", -1);
+		
+		break;
+	
+	#endregion
+	
+	#region Bemo
+	
+	case "Bemo":
+	
+		oBemo.isObjective = false;
+		add_text("Finn you found me!","Bemo",-1);
+		add_text("Bemo what are you doing down here?","Finn",1);
+		add_text("Sorry Finn, I wanted to go adventuring but got lost","Bemo",-1);
+	
+	break;
+	
+	#endregion
+	
 	}
 } 
