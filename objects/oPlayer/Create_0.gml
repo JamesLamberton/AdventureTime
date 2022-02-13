@@ -30,19 +30,27 @@ inventory.inventory[0] = current_weapon_inventory_id;//give sword
 inventory.inventory[inventory.row_length - 1] = 0;//give arrows INVENTORY SLOT RESERVED
 inventory.inventory[inventory.row_length - 2] = 2;//give health potion INVENTORY SLOT RESERVED
 
+
+
 //list of sword instances
 scarlet = instance_create_layer(x,y - 10,"Instances",inventory.list_of_item_object_reference[current_weapon_inventory_id]);
 scarlet.inventory_index = 0;
 blood_sword = -1;
 
 potion_count = 1;
+potion_max = 10;
 in_inventory = 0;
-coin = 0;
+in_home_inv = 0;
+coin = 20;
+in_shop = 0;
+in_dialogue = 0;
+block_dialogue = 0;
 
 equiped_weapon_type = 1;//select melee 1, or ranged -1
 melee_weapon = scarlet;
 melee_weapon.weapon_in_inventory = 1;
-ammo = 8;
+ammo = 5;
+ammo_max = 5;
 ranged_projectile_height = 6;
 ammo_type = oBolt;
 

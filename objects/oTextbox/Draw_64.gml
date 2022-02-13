@@ -134,7 +134,8 @@ else
 
 #region Flip Through Pages
 if accept_key
-{
+{	
+	
 	if draw_char == text_length[page] // If typing is done, go to next page
 	{
 		if page < page_number-1 // Next page
@@ -151,6 +152,8 @@ if accept_key
 			}
 			
 			instance_destroy(); 
+			oPlayer.in_dialogue = 0;
+			
 		}
 	}
 	else // If not done typing

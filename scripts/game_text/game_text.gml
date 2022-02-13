@@ -1,6 +1,7 @@
 /// @param text_id
 function game_text(_text_id)
 {
+	oPlayer.in_dialogue = 1;
 	switch(_text_id)
 	{
 		
@@ -21,6 +22,10 @@ function game_text(_text_id)
 			add_text("Yeah sure","Finn", 1);
 			add_text("Awesome","ChooseGoose", -1);
 			add_text("Take a look!","ChooseGoose", -1);
+			
+			oPlayer.in_shop = 1;
+			shop_initialise(_text_id);
+			oStoreManager.current_owner = "Choose Goose";
 		break;
 		
 		case "ChooseGoose-TradeNo":

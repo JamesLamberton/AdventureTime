@@ -10,6 +10,7 @@
 	key_block = mouse_check_button_pressed(mb_right);
 	key_block_stopped = mouse_check_button_released(mb_right);
 	key_swap_weapon_type = keyboard_check_pressed(ord("Z"));
+	key_esc = keyboard_check_pressed(vk_escape);
 	
 	
 #endregion
@@ -64,13 +65,11 @@
 	}
 	y = y + vsp;
 
-	
-	
 #endregion
 
 #region Movement + Jumping
 	var move = key_right - key_left;
-	if(in_inventory){
+	if(in_inventory) || (in_shop) || (in_dialogue) || (in_home_inv){
 		move = 0;
 	}
 	if(rolled && touching_ground){
@@ -117,19 +116,20 @@
 		
 	vsp = vsp + grv;
 		
-	if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state != "Blocking")
+	if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state != "Blocking") and (!in_shop) and (!in_dialogue) and (!in_home_inv)
 	{
 			
 		vsp = jump_height;
 		jumped = 1;
 			
 			
-	}else if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state == "Blocking"){
+	}else if (place_meeting(x,y+1,oSolid)) and (key_jump) and (!in_inventory) and (state == "Blocking") and (!in_dialogue) and (!in_home_inv)
+	{
 		vsp = jump_height/2;
 		jumped = 1;
 	}
 	
-	if(double_jumped == 0) && (key_jump) && (vsp != jump_height) && (!in_inventory){
+	if(double_jumped == 0) && (key_jump) && (vsp != jump_height) && (!in_inventory) && (!in_shop) && (!in_dialogue) && (!in_home_inv){
 		double_jumped = 1;
 		vsp = jump_height;
 		if(image_xscale == sign(current_speed)){
@@ -144,14 +144,47 @@
 	prev_move = move;
 #endregion
 
+#region dialogue toggle
+	if in_dialogue && instance_exists(oTextbox){
+		
+		state = "Speaking";
+		
+	}else if(in_shop) && (key_esc) && !instance_exists(oTextbox){
+		state = "Move";
+		in_dialogue = 0;
+		
+	}else if(in_dialogue) && !instance_exists(oTextbox) && !(in_shop){
+		state = "Move";
+		
+		in_dialogue = 0;
+	}
+#endregion
+
+#region shop toggle
+	if (in_shop)&& (!key_esc) && !instance_exists(oTextbox) && in_dialogue{
+		oStoreManager.shop_inventory.open = 1;
+		state = "Checking Shop";
+		in_dialogue = 0;
+		block_dialogue = 1;
+		
+	}else if(in_shop) && (key_esc) && !instance_exists(oTextbox){
+		in_shop = 0;
+		state = "Move";
+		oStoreManager.shop_inventory.open = 0;
+		block_dialogue = 0;
+		
+	}
+#endregion
+
+
 #region Inventory toggle
 	
-	if((key_inventory)&&(!in_inventory))
+	if((key_inventory)&&(!in_inventory)) and (!in_shop)
 	{
 		state = "Checking Inventory";
 	}
 	
-	else if((in_inventory) && (key_inventory))
+	else if((in_inventory) && (key_inventory)) and (!in_shop)
 	{
 		inventory.open = 0;
 		state = "Move";
@@ -208,7 +241,7 @@ switch (state) // STATE MACHINE \\
 			else if air_attack == 1{
 				state = "Move";
 			}
-			else if (touching_ground){
+			else if (touching_ground) && (!in_home_inv){
 				state = "Attack";
 			}
 		}
@@ -218,9 +251,11 @@ switch (state) // STATE MACHINE \\
 			state = "Ranged Attack";
 		}
 		
-		if (key_roll and place_meeting(x,y+1,oSolid ))|| (double_jumped == 1)
+		if ((key_roll and place_meeting(x,y+1,oSolid ))|| (double_jumped == 1))&&(!in_home_inv)
 		{
-			state = "Roll";
+			state = "Roll";   
+			
+			
 			
 		}
 		
@@ -263,6 +298,24 @@ switch (state) // STATE MACHINE \\
 	#endregion 
 	
 	#region Checking Inventory state
+		case "Checking Shop":
+		
+			in_shop = 1;
+			sprite_index = FinnIdle;
+			
+		break;
+	#endregion 
+	
+	#region In Dialogue state
+		case "Speaking":
+		
+			in_dialogue = 1;
+			sprite_index = FinnIdle;
+			
+		break;
+	#endregion 
+	
+	#region Checking Inventory state
 		case "Checking Inventory":
 		
 			inventory.open = 1;
@@ -275,7 +328,7 @@ switch (state) // STATE MACHINE \\
 	#region Attack State 
 	
 		case "Attack":
-			set_state_sprite(FinnAttackOne, 1.25, 0);
+			set_state_sprite(melee_weapon.attack_sprite, 1.25, 0);
 			if animation_hit_frame(melee_weapon.hit_frame)
 			{
 				finn_box = create_hitbox(x, y, self, melee_weapon.damage_sprite, melee_weapon.knockback, 4, melee_weapon.damage, image_xscale);
@@ -289,7 +342,7 @@ switch (state) // STATE MACHINE \\
 			{
 				if (image_index > 2){
 					hsp = hsp*1.2;
-					vsp = 0.2;
+					//vsp = 0.2;
 					}
 				
 				
@@ -330,8 +383,10 @@ switch (state) // STATE MACHINE \\
 			{
 				if (image_index > 2){
 					hsp = hsp*1.2;
-					vsp = 0.2;
-				}		
+					//vsp = 0.2;
+				}
+				
+				
 			}
 		
 			if animation_end()
@@ -461,4 +516,5 @@ switch (state) // STATE MACHINE \\
 		facing = sign(move);
 	}
 	
+
 #endregion

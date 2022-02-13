@@ -93,10 +93,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-
     "name": "UI",
     "path": "folders/Sprites/UI.yy",
-
   },
   "resourceVersion": "1.0",
   "name": "sInventoryBox",
