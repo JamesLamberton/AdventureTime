@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "",
-    "path": "",
+    "name": "sDropOff",
+    "path": "sprites/sDropOff/sDropOff.yy",
   },
   "solid": false,
   "visible": true,
