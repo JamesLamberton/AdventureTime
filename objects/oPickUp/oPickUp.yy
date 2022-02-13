@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPickUp",
-    "path": "sprites/sPickUp/sPickUp.yy",
+    "name": "",
+    "path": "",
   },
   "solid": false,
   "visible": true,
