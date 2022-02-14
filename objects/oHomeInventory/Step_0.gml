@@ -17,5 +17,6 @@ if(key_drop)&&(inventory[draw_select] != -1){
 		oYellowSword.x = oPickUp.x;
 		oYellowSword.y = oPickUp.y - 20;
 		inventory[draw_select] = -1;
+		
 	}
 }
