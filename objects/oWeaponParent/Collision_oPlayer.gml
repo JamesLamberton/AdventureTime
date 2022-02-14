@@ -1,3 +1,4 @@
+
 if(collision == 0) && (!weapon_in_inventory){
 	collision = 1;
 	alarm[0] = 5*room_speed;
@@ -21,8 +22,10 @@ if(collision == 0) && (!weapon_in_inventory){
 			}else if(inventory_index == 3){
 				//demon blood sword added
 				//oPlayer.has_blood_sword = j;
+				
 				oPlayer.blood_sword = self;
 				oPlayer.blood_sword.inventory_index = j;
+				
 			}
 			oPlayer.inventory.inventory[j] = weapon_reference;
 			break;

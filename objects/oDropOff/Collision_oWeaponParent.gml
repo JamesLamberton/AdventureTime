@@ -17,7 +17,6 @@ if(other.weapon_in_inventory == 0){
 	}else{
 		//found one at j
 		oHomeManager.home_inventory.inventory[j] = other.weapon_reference;
-		other.inventory_index = j;
 	}
 	
 }
