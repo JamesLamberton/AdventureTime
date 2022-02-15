@@ -14,12 +14,12 @@ if(collision == 0) && (!weapon_in_inventory){
 			oItemTextParent.weapontype = displayable_name;
 			weapon_in_inventory  = 1;
 			//list of weapons to check off
-			if(inventory_index == 1){
+			if(weapon_reference == 1){
 				//scarlet added
 				//oPlayer.has_scarlet = j;
 				oPlayer.scarlet = self;
 				oPlayer.scarlet.inventory_index = j;
-			}else if(inventory_index == 3){
+			}else if(weapon_reference == 3){
 				//demon blood sword added
 				//oPlayer.has_blood_sword = j;
 				
