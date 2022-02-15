@@ -20,7 +20,7 @@ if(key_equip){
 		oPlayer.inventory.inventory[0] = oPlayer.scarlet.weapon_reference;
 		oPlayer.inventory.inventory[oPlayer.melee_weapon.inventory_index] = oPlayer.melee_weapon.weapon_reference;
 		oPlayer.melee_weapon = oPlayer.scarlet;
-					
+				
 	}
 }
 

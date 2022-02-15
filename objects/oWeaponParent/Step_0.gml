@@ -1,4 +1,7 @@
 
+if(displayable_name == "Scarlet"){
+	show_debug_message(inventory_index);
+}
 if (place_meeting(x+hsp,y,oSolid)){	
 	hsp = -hsp/2;
 }
