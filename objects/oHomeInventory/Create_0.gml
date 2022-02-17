@@ -12,3 +12,4 @@ list_of_item_object_reference = [oBolt,oYellowSword,oHealthPotion,oDemonSword];/
 
 open = 0;
 draw_select = 0;
+type = "Home";

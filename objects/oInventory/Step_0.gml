@@ -24,7 +24,7 @@ if(key_equip){
 	}
 }
 
-if(key_drop){
+if(key_drop) and (oPlayer.in_home_inv){
 	if(draw_select == 0){
 		cant_drop = 1;
 	}else if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){

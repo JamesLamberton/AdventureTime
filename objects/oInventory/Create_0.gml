@@ -21,4 +21,5 @@ first_open = 1;
 cant_drop = 0;
 
 k = 100;
+type = "Finns";
 

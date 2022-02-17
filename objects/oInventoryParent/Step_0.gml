@@ -3,8 +3,19 @@ if not instance_exists(oPlayer) exit;
 if(open == 1){
 	depth = 0;
 	
+	if(oPlayer.in_home_inv){
+		if(self.type == "Home"){
+			x = lerp(oPlayer.x,oPlayer.x, 0.5) - 22 + 0.5*(object_get_sprite(oPlayer.inventory).sprite_width);
+		}else if(self.type == "Finns"){
+			x = lerp(oPlayer.x,oPlayer.x, 0.5) - 28 - 0.5*(object_get_sprite(oPlayer.inventory).sprite_width);
+		}else{
+			x = lerp(oPlayer.x,oPlayer.x, 0.5) - 25;
+		}
+		
+	}else{
+		x = lerp(oPlayer.x,oPlayer.x, 0.5) - 25;
+	}
 	
-	x = lerp(oPlayer.x,oPlayer.x, 0.5) - 25;
 	y = lerp(oPlayer.y,oPlayer.y, 0.5) - 70;
 	
 	if(first_open){

@@ -179,12 +179,12 @@
 
 #region Inventory toggle
 	
-	if((key_inventory)&&(!in_inventory)) and (!in_shop)
+	if((key_inventory)&&(!in_inventory)) and (!in_shop) and (!in_home_inv)
 	{
 		state = "Checking Inventory";
 	}
 	
-	else if((in_inventory) && (key_inventory)) and (!in_shop)
+	else if((in_inventory) && (key_inventory)) and (!in_shop) and (!in_home_inv)
 	{
 		inventory.open = 0;
 		state = "Move";
