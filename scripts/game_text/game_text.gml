@@ -79,6 +79,10 @@ function game_text(_text_id)
 			oBemo.isObjective = true;
 		break;
 		
+		case "JakeQuest01-No":
+			add_text("Come back if you still want to help!", "Jake",-1);
+		break;
+		
 		case "JakeQuest01-Finished":
 			add_text("You found bemo! thanks Finn!","Jake",-1);
 			
