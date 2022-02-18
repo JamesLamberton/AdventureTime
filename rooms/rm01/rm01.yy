@@ -81,8 +81,6 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oTextbox","path":"objects/oTextbox/oTextbox.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":512.0,"y":64.0,"resourceVersion":"1.0","name":"inst_58A434F4","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oStoreManager","path":"objects/oStoreManager/oStoreManager.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":64.0,"resourceVersion":"1.0","name":"inst_59ABF12E","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oChest","path":"objects/oChest/oChest.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1024.0,"y":272.0,"resourceVersion":"1.0","name":"inst_752EE276","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oDropOff","path":"objects/oDropOff/oDropOff.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":992.0,"y":280.0,"resourceVersion":"1.0","name":"inst_2E28EA8B","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oPickUp","path":"objects/oPickUp/oPickUp.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1056.0,"y":280.0,"resourceVersion":"1.0","name":"inst_254CC3E5","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oDemonSword","path":"objects/oDemonSword/oDemonSword.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":896.0,"y":272.0,"resourceVersion":"1.0","name":"inst_A8A6A7A","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":800,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":8,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tGrassTest","path":"tilesets/tGrassTest/tGrassTest.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":63,"SerialiseHeight":12,"TileSerialiseData":[
@@ -177,8 +175,6 @@
     {"name":"inst_58A434F4","path":"rooms/rm01/rm01.yy",},
     {"name":"inst_59ABF12E","path":"rooms/rm01/rm01.yy",},
     {"name":"inst_752EE276","path":"rooms/rm01/rm01.yy",},
-    {"name":"inst_2E28EA8B","path":"rooms/rm01/rm01.yy",},
-    {"name":"inst_254CC3E5","path":"rooms/rm01/rm01.yy",},
     {"name":"inst_A8A6A7A","path":"rooms/rm01/rm01.yy",},
   ],
   "inheritCreationOrder": false,

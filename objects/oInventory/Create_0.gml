@@ -1,3 +1,5 @@
+event_inherited();
+
 slot_num = 6;
 
 
@@ -23,3 +25,4 @@ cant_drop = 0;
 k = 100;
 type = "Finns";
 
+found_slot = 0;

@@ -24,23 +24,56 @@ if(key_equip){
 	}
 }
 
-if(key_drop) and (oPlayer.in_home_inv){
+if(key_drop) and (oPlayer.in_home_inv) and (oHomeManager.home_inventory.home_or_personal == 1){
 	if(draw_select == 0){
 		cant_drop = 1;
 	}else if (oPlayer.blood_sword != -1) && (draw_select == oPlayer.blood_sword.inventory_index){
-		oPlayer.blood_sword.weapon_in_inventory = 0;
-		oPlayer.blood_sword.x = oPlayer.x + oPlayer.facing*40;
-		oPlayer.blood_sword.y = oPlayer.y - 40;
-		oPlayer.blood_sword.draw_weapon_text = 0;
-		oPlayer.blood_sword = -1;
-		oPlayer.inventory.inventory[draw_select] = -1;
+		found_slot = 0;
+		for(var j = 0; j < oHomeManager.home_inventory.slot_num; j++){
+	
+			if(oHomeManager.home_inventory.inventory[j] == -1){//found empty slot
+				found_slot = 1;
+				break;
+			}
+		
+		}
+		if(!found_slot){
+			//did not find an empty slot
+			draw_failed_pick_up = 1;
+		}else{
+			//found one at j
+			
+			oHomeManager.home_inventory.inventory[j] = oPlayer.blood_sword.weapon_reference;
+			oPlayer.blood_sword.inventory_index = j;
+			oPlayer.blood_sword.draw_weapon_text = 0;
+			oHomeManager.home_inventory.blood_sword = oPlayer.blood_sword;
+			oPlayer.blood_sword = -1;
+			oPlayer.inventory.inventory[draw_select] = -1;
+		}
+		
 	}else if(oPlayer.scarlet != -1) && (draw_select == oPlayer.scarlet.inventory_index){
-		oPlayer.scarlet.weapon_in_inventory = 0;
-		oPlayer.scarlet.x = oPlayer.x + oPlayer.facing*40;
-		oPlayer.scarlet.y = oPlayer.y - 40;
-		oPlayer.scarlet.draw_weapon_text = 0;
-		oPlayer.scarlet = -1;
-		oPlayer.inventory.inventory[draw_select] = -1;
+		found_slot = 0;
+		for(var j = 0; j < oHomeManager.home_inventory.slot_num; j++){
+	
+			if(oHomeManager.home_inventory.inventory[j] == -1){//found empty slot
+				found_slot = 1;
+				break;
+			}
+		
+		}
+		if(!found_slot){
+			//did not find an empty slot
+			draw_failed_pick_up = 1;
+		}else{
+			//found one at j
+			
+			oHomeManager.home_inventory.inventory[j] = oPlayer.scarlet.weapon_reference;
+			oPlayer.scarlet.inventory_index = j;
+			oPlayer.scarlet.draw_weapon_text = 0;
+			oHomeManager.home_inventory.scarlet = oPlayer.scarlet;
+			oPlayer.scarlet = -1;
+			oPlayer.inventory.inventory[draw_select] = -1;
+		}
 	}
 }
 /*

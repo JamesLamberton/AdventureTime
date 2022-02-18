@@ -24,3 +24,7 @@ first_open = 1;
 INVENTORY_TYPE = "Parent";//can be "Player", "Home", "Shop"
 
 
+left_wall = 0;
+right_wall = 0;
+upper_wall = 0;
+lower_wall = 0;

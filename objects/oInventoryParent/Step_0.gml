@@ -25,10 +25,10 @@ if(open == 1){
 	
 	
 	for(var i = 0; i < slot_num; i++){
-		var left_wall = (x + (i mod row_length) * (cell_size + gap) - 2);
-		var right_wall = left_wall + cell_size - 1;
-		var upper_wall = (y + (i div row_length) * (cell_size + gap) - 2);
-		var lower_wall = upper_wall + cell_size - 1;
+		left_wall = (x + (i mod row_length) * (cell_size + gap) - 2);
+		right_wall = left_wall + cell_size - 1;
+		upper_wall = (y + (i div row_length) * (cell_size + gap) - 2);
+		lower_wall = upper_wall + cell_size - 1;
 		if(mouse_x >= left_wall) && (mouse_x <= right_wall) && (mouse_y >= upper_wall) && (mouse_y <= lower_wall){
 			draw_select = i;
 		}

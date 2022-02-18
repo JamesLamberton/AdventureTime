@@ -13,3 +13,10 @@ list_of_item_object_reference = [oBolt,oYellowSword,oHealthPotion,oDemonSword];/
 open = 0;
 draw_select = 0;
 type = "Home";
+
+scarlet = -1;
+blood_sword = -1;
+
+found_slot = 0;
+
+home_or_personal = -1;//-1 if mouse over home, 1 if mouse ovfer personal
