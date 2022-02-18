@@ -1,6 +1,5 @@
 if not instance_exists(oPlayer) exit;
 
-
 draw_sprite_stretched(sInventoryBorder,0,x-6,y-6,2*border_size + row_length*(cell_size + gap),2*border_size + bottom_border + (((slot_num - 1) div row_length) + 1)*(cell_size + gap));
 
 draw_set_font(fAdventureTime);

@@ -176,7 +176,6 @@
 	}
 #endregion
 
-
 #region Inventory toggle
 	
 	if((key_inventory)&&(!in_inventory)) and (!in_shop)

@@ -1,4 +1,3 @@
-
 slot_num = 3;
 
 row_length = 3;
