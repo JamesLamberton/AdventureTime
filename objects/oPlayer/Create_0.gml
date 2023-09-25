@@ -72,3 +72,4 @@ blocking = 0;
 touching_ground = 1;
 hit_wall_right = 0;
 hit_wall_left = 0;
+

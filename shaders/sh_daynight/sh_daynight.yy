@@ -1,11 +1,10 @@
 {
-  "type": 1,
+  "resourceType": "GMShader",
+  "resourceVersion": "1.0",
+  "name": "sh_daynight",
   "parent": {
     "name": "DayNightSystem",
     "path": "folders/BigStuff/DayNightSystem.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sh_daynight",
-  "tags": [],
-  "resourceType": "GMShader",
+  "type": 1,
 }
